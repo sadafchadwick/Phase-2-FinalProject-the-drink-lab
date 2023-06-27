@@ -1,8 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import Nav from './Nav';
+import { Switch, Route } from "react-router-dom"
+
+import NavBar from './NavBar';
 import DrinkContainer from './DrinkContainer';
 import Header from './Header';
-import Carousel from './Carousel';
+
+
+
 
 
 function App() {
@@ -11,19 +15,38 @@ function App() {
 
   useEffect(() => {
     fetch("http://localhost:3000/cocktailsMocktails")
-    .then((resp) => resp.json())
-    .then((drinks) => fillDrinks(drinks))
+      .then((resp) => resp.json())
+      .then((drinks) => fillDrinks(drinks))
   }, [])
 
-  console.log(drinks)
+
   return (
     <div className="App">
-     {/* <Nav />
-      <Header />*/}
-      <DrinkContainer drinks={drinks}/>
-    <Carousel drinks={drinks}/> 
+      <Header />
+      <NavBar />
+      {/* <CarouselItems drinks={drinks}/> */}
+      {/* <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/cocktails">
+          <Cocktails />
+        </Route>
+        <Route path="/mocktails">
+          <Mocktails />
+        </Route>
+        <Route path="/myrecipebook">
+          <MyRecipeBook />
+        </Route>
+        {/* <Route exact path="/projects/:id">
+          <DrinkCards />
+        </Route> */}
+      {/* </Switch> */}
+
+
+      <DrinkContainer drinks={drinks} />
     </div>
-  );
+  )
 }
 
 export default App;
