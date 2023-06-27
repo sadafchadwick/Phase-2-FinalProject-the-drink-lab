@@ -3,6 +3,7 @@ import { Switch, Route } from "react-router-dom"
 import NavBar from './NavBar';
 import DrinkContainer from './DrinkContainer';
 import Header from './Header';
+// import Carousel from "./Carousel"
 
 
 
@@ -23,7 +24,7 @@ function App() {
     <div className="App">
       <Header />
       <NavBar />
-      {/* <CarouselItems drinks={drinks}/> */}
+      {/* <Carousel drinks={drinks}/> */}
       {/* <Switch>
         <Route exact path="/">
           <Home />

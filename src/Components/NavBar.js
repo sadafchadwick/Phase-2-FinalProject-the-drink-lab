@@ -1,26 +1,26 @@
 import React from "react";
-import {NavLink} from "react-router-dom"
+import { NavLink } from "react-router-dom"
 
 function NavBar() {
 
   return (
     <nav>
-        <span>
-          <button className="navbutton">
-          <NavLink to="/">HOME</NavLink>
-          </button>
-        </span>
-        <span>
-          <NavLink to="/cocktails">COCKTAILS</NavLink>
-        </span>
-        <span>
-          <NavLink to="/mocktails">MOCKTAILS</NavLink>
-        </span>
-        <span>
-          <NavLink to="/myrecipebook">MY RECIPE BOOK</NavLink>
-        </span>
+      <a href="#animation animation start-about">HOME
+        <NavLink to="/"></NavLink>
+      </a>
+      <a href="#animation start-blog">COCKTAILS
+        <NavLink to="/cocktails"></NavLink>
+      </a>
+      <a href="#animation start-portefolio">MOCKTAILS
+        <NavLink to="/mocktails"></NavLink>
+      </a>
+      <a href="#animation start-contact">MY RECIPE BOOK
+        <NavLink to="/myrecipebook"></NavLink>
+      </a>
+      <div class="animation start-home"></div>
     </nav>
-  )  
-}      
+
+  )
+}
 
 export default NavBar;
