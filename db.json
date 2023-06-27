@@ -1,140 +1,204 @@
 {
-    "cocktailsMocktails": [
-        {
-            "id": 1,
-            "name": "Malibu Bay Breeze",
-            "image": "https://images.absolutdrinks.com/drink-images/Raw/Malibu/de899bb5-e420-4673-a5b3-6b6969ddf454.png?imwidth=350",
-            "cocktail": true,
-            "alcoholType": "Rum",
-            "ingredients":["Pineapple Juice", "Cranberry Juice"],
-            "likes": 0
-        },
-        {
-            "id": 2,
-            "name":"Mojito",
-            "image":"https://images.absolutdrinks.com/drink-images/Raw/Malibu/15d849f0-5594-43e7-aebf-2a2039cc124c.png?imwidth=350",
-            "cocktail":true,
-            "alcoholType":"Rum",
-            "ingredients":["Lime Juice","Simple Syrup","Mint","Club Soda"],
-            "likes": 1
-        },
-        {
-            "id": 3,
-            "name": "Gin and Tonic",
-            "image": "https://www.thespruceeats.com/thmb/0noKFvArOC2N2Eg4pA7uwc0bC30=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/gin-and-tonic-recipe-759300-hero-01-aa12e6504f944c54b8b9c589cc1d0ac6.jpg",
-            "cocktail":true,
-            "alcoholType":"Gin",
-            "ingredients":["Tonic Water"],
-            "likes":0
-        },
-        {
-            "id": 4,
-            "name": "Whiskey Sour",
-            "image": "https://assets.bonappetit.com/photos/57acc14e53e63daf11a4d9b6/1:1/w_2560%2Cc_limit/whiskey-sour.jpg",
-            "cocktail":true,
-            "alcoholType":"Whiskey",
-            "ingredients":["Sour Mix", "Cherry"],
-            "likes":0
-        },
-        {
-            "id" : 5, 
-            "name": "Old Fashioned",
-            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHKW0F9lLH63Acg5hWSRJdcjvPZZFw6yBX2kESVhuOKQ&s%E2%80%9D",
-            "cocktail":true,
-            "alcoholType": "Bourbon or Rye Whiskey",
-            "ingredients":["Simple Syrup", "Bitters", "Orange", "Maraschino Cherry", "Large Ice Cube" ],
-            "likes": 0
-        },
-        {
-            "id": 6,
-            "name": "Margherita",
-            "image": "data:image/jpeg;base64,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",
-            "cocktail":true,
-            "alcoholType":"Tequila",
-            "ingredients":["Lime Juice","Triple Sec"],
-            "likes":0
-        },
-        {
-            "id": 7,
-            "name": "Arnold Palmer",
-            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRONjUaBT6I4CCBKsSqatyfuEpRqEuVi0wxb3a7TlVbrQ&usqp=CAU&ec=48600113",
-            "cocktail": false,
-            "alcoholType": "none",
-            "ingredients": ["Lemonade", "Iced Tea"],
-            "likes": 0
-        },
-        {
-            "id": 8,
-            "name": "Manhattan",
-            "image": "https://www.liquor.com/thmb/uUCASb1R5cUmjQZ5yeI61oG_ff8=/750x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__liquor__2018__05__10144903__Manhattan-720x720-recipe-9497922907c14d91898f557cb51f2ea3.jpg",
-            "cocktail": true,
-            "alcoholType": "Whiskey",
-            "ingredients": ["Vermouth", "Bitters", "Brandied Cherry"],
-            "likes":0
-        },
-        {
-            "id": 9,
-            "name": "Virgin Mary",
-            "image": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2009/4/20/0/BX0124-1_Virgin-Marys_s4x3.jpg.rend.hgtvcom.826.620.suffix/1532458324910.jpeg",
-            "cocktail":false,
-            "alcoholType": "none",
-            "ingredients": ["HorseRadish","Worcestershire","Hot Sauce","Tomato Juice"],
-            "likes":0
-        },
-        {
-            "id": 10,
-            "name": "Tequila Sunrise",
-            "image": "https://www.liquor.com/thmb/rMKWcpnMlrGTuNE35fpgkDzoKVk=/750x0/filters:no_upscale():max_bytes(150000):strip_icc()/tequila-sunrise-1500x1500-hero-eeae10efeb134a3e9d5a3852b1b6e7dc.jpg",
-            "cocktail": true,
-            "alcoholType": "Tequila",
-            "ingredients": ["Freshly Squeezed Orange Juice", "Grenadine", "Orange Slice", "Cherry"],
-            "likes":0
-        },
-        {
-            "id": 11,
-            "name": "Dirty Martini",
-            "image": "https://www.liquor.com/thmb/mrAVoP010XP572kSY-6EzjIncrU=/750x0/filters:no_upscale():max_bytes(150000):strip_icc()/dirty-martini-1500x1500-hero-6cbd60561031409ea1dbf1657d05cb2d.jpg",
-            "cocktail": true,
-            "alcoholType": "Gin or Vodka",
-            "ingredients": ["Vermouth","Olibe Brine", "2 to 4 Olives"],
-            "likes":0
-        },
-        {
-            "id": 12,
-            "name": "Rose Fizz",
-            "image": "https://hips.hearstapps.com/hmg-prod/images/rose-fizz-jpg-1603382759.jpg?crop=0.8895131086142323xw:1xh;center,top&resize=980:*",
-            "cocktail": false,
-            "alcoholType": "",
-            "ingredients": ["Egg White", "Powdered Sugar", "Lemon Juice", "Rose Lemonade"],
-            "likes":0
-        },
-        {
-            "id": 13,
-            "name": "Espresso Martini",
-            "image": "https://preppykitchen.com/wp-content/uploads/2021/01/espresso-martini-feature.jpg",
-            "cocktail": true,
-            "alcoholType": "Vodka",
-            "ingredients": ["Coffee Liqueur", "Freshly Brewed Espresso", "Simple Syrup", "Coffee Bean Garnish"],
-            "likes":0
-        },
-        {
-            "id": 14,
-            "name":"Mango-Lime Spritzer",
-            "image": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2017/10/9/0/YW1012H_Mango-Lime-Spritzer_s4x3.jpg.rend.hgtvcom.1280.720.suffix/1507562209163.jpeg",
-            "cocktail":false,
-            "alcoholType":"none",
-            "ingredients": ["Mango Juice","Lime Juice","Ginger Beer","Mango Wedge","Lime Wedge"],
-            "likes":0
-        },
-        {
-            "id": 15,
-            "name": "Mermaid Refresher",
-            "image": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2017/8/8/0/KC1406H_Mermaid-Lemonade-Refresher_s4x3.jpg.rend.hgtvcom.826.620.suffix/1502227830858.jpeg",
-            "cocktail": false,
-            "alcoholType": "",
-            "ingredients": ["Blue Hawaiian Punch", "Pineapple Juice", "Lemonade", "Maraschino Cherry Garnish", "Lemon Slice Garnish"],
-            "likes":0
-        }
-        
-    ]
+  "cocktailsMocktails": [
+    {
+      "id": 1,
+      "name": "Malibu Bay Breeze",
+      "image": "https://images.absolutdrinks.com/drink-images/Raw/Malibu/de899bb5-e420-4673-a5b3-6b6969ddf454.png?imwidth=350",
+      "cocktail": true,
+      "alcoholType": "Rum",
+      "ingredients": [
+        "Pineapple Juice",
+        "Cranberry Juice"
+      ],
+      "likes": 0
+    },
+    {
+      "id": 2,
+      "name": "Mojito",
+      "image": "https://images.absolutdrinks.com/drink-images/Raw/Malibu/15d849f0-5594-43e7-aebf-2a2039cc124c.png?imwidth=350",
+      "cocktail": true,
+      "alcoholType": "Rum",
+      "ingredients": [
+        "Lime Juice",
+        "Simple Syrup",
+        "Mint",
+        "Club Soda"
+      ],
+      "likes": 1
+    },
+    {
+      "id": 3,
+      "name": "Gin and Tonic",
+      "image": "https://www.thespruceeats.com/thmb/0noKFvArOC2N2Eg4pA7uwc0bC30=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/gin-and-tonic-recipe-759300-hero-01-aa12e6504f944c54b8b9c589cc1d0ac6.jpg",
+      "cocktail": true,
+      "alcoholType": "Gin",
+      "ingredients": [
+        "Tonic Water"
+      ],
+      "likes": 0
+    },
+    {
+      "id": 4,
+      "name": "Whiskey Sour",
+      "image": "https://assets.bonappetit.com/photos/57acc14e53e63daf11a4d9b6/1:1/w_2560%2Cc_limit/whiskey-sour.jpg",
+      "cocktail": true,
+      "alcoholType": "Whiskey",
+      "ingredients": [
+        "Sour Mix",
+        "Cherry"
+      ],
+      "likes": 0
+    },
+    {
+      "id": 5,
+      "name": "Old Fashioned",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHKW0F9lLH63Acg5hWSRJdcjvPZZFw6yBX2kESVhuOKQ&s%E2%80%9D",
+      "cocktail": true,
+      "alcoholType": "Bourbon or Rye Whiskey",
+      "ingredients": [
+        "Simple Syrup",
+        "Bitters",
+        "Orange",
+        "Maraschino Cherry",
+        "Large Ice Cube"
+      ],
+      "likes": 0
+    },
+    {
+      "id": 6,
+      "name": "Margherita",
+      "image": "data:image/jpeg;base64,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",
+      "cocktail": true,
+      "alcoholType": "Tequila",
+      "ingredients": [
+        "Lime Juice",
+        "Triple Sec"
+      ],
+      "likes": 0
+    },
+    {
+      "id": 7,
+      "name": "Arnold Palmer",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRONjUaBT6I4CCBKsSqatyfuEpRqEuVi0wxb3a7TlVbrQ&usqp=CAU&ec=48600113",
+      "cocktail": false,
+      "alcoholType": "none",
+      "ingredients": [
+        "Lemonade",
+        "Iced Tea"
+      ],
+      "likes": 0
+    },
+    {
+      "id": 8,
+      "name": "Manhattan",
+      "image": "https://www.liquor.com/thmb/uUCASb1R5cUmjQZ5yeI61oG_ff8=/750x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__liquor__2018__05__10144903__Manhattan-720x720-recipe-9497922907c14d91898f557cb51f2ea3.jpg",
+      "cocktail": true,
+      "alcoholType": "Whiskey",
+      "ingredients": [
+        "Vermouth",
+        "Bitters",
+        "Brandied Cherry"
+      ],
+      "likes": 0
+    },
+    {
+      "id": 9,
+      "name": "Virgin Mary",
+      "image": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2009/4/20/0/BX0124-1_Virgin-Marys_s4x3.jpg.rend.hgtvcom.826.620.suffix/1532458324910.jpeg",
+      "cocktail": false,
+      "alcoholType": "none",
+      "ingredients": [
+        "HorseRadish",
+        "Worcestershire",
+        "Hot Sauce",
+        "Tomato Juice"
+      ],
+      "likes": 0
+    },
+    {
+      "id": 10,
+      "name": "Tequila Sunrise",
+      "image": "https://www.liquor.com/thmb/rMKWcpnMlrGTuNE35fpgkDzoKVk=/750x0/filters:no_upscale():max_bytes(150000):strip_icc()/tequila-sunrise-1500x1500-hero-eeae10efeb134a3e9d5a3852b1b6e7dc.jpg",
+      "cocktail": true,
+      "alcoholType": "Tequila",
+      "ingredients": [
+        "Freshly Squeezed Orange Juice",
+        "Grenadine",
+        "Orange Slice",
+        "Cherry"
+      ],
+      "likes": 0
+    },
+    {
+      "id": 11,
+      "name": "Dirty Martini",
+      "image": "https://www.liquor.com/thmb/mrAVoP010XP572kSY-6EzjIncrU=/750x0/filters:no_upscale():max_bytes(150000):strip_icc()/dirty-martini-1500x1500-hero-6cbd60561031409ea1dbf1657d05cb2d.jpg",
+      "cocktail": true,
+      "alcoholType": "Gin or Vodka",
+      "ingredients": [
+        "Vermouth",
+        "Olibe Brine",
+        "2 to 4 Olives"
+      ],
+      "likes": 0
+    },
+    {
+      "id": 12,
+      "name": "Rose Fizz",
+      "image": "https://hips.hearstapps.com/hmg-prod/images/rose-fizz-jpg-1603382759.jpg?crop=0.8895131086142323xw:1xh;center,top&resize=980:*",
+      "cocktail": false,
+      "alcoholType": "",
+      "ingredients": [
+        "Egg White",
+        "Powdered Sugar",
+        "Lemon Juice",
+        "Rose Lemonade"
+      ],
+      "likes": 0
+    },
+    {
+      "id": 13,
+      "name": "Espresso Martini",
+      "image": "https://preppykitchen.com/wp-content/uploads/2021/01/espresso-martini-feature.jpg",
+      "cocktail": true,
+      "alcoholType": "Vodka",
+      "ingredients": [
+        "Coffee Liqueur",
+        "Freshly Brewed Espresso",
+        "Simple Syrup",
+        "Coffee Bean Garnish"
+      ],
+      "likes": 0
+    },
+    {
+      "id": 14,
+      "name": "Mango-Lime Spritzer",
+      "image": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2017/10/9/0/YW1012H_Mango-Lime-Spritzer_s4x3.jpg.rend.hgtvcom.1280.720.suffix/1507562209163.jpeg",
+      "cocktail": false,
+      "alcoholType": "none",
+      "ingredients": [
+        "Mango Juice",
+        "Lime Juice",
+        "Ginger Beer",
+        "Mango Wedge",
+        "Lime Wedge"
+      ],
+      "likes": 0
+    },
+    {
+      "id": 15,
+      "name": "Mermaid Refresher",
+      "image": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2017/8/8/0/KC1406H_Mermaid-Lemonade-Refresher_s4x3.jpg.rend.hgtvcom.826.620.suffix/1502227830858.jpeg",
+      "cocktail": false,
+      "alcoholType": "",
+      "ingredients": [
+        "Blue Hawaiian Punch",
+        "Pineapple Juice",
+        "Lemonade",
+        "Maraschino Cherry Garnish",
+        "Lemon Slice Garnish"
+      ],
+      "likes": 0
+    }
+  ]
 }

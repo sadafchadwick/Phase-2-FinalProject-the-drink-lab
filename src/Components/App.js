@@ -4,6 +4,7 @@ import { Switch, Route } from "react-router-dom"
 import NavBar from './NavBar';
 import DrinkContainer from './DrinkContainer';
 import Header from './Header';
+import DrinkForm from './DrinkForm';
 
 
 
@@ -19,6 +20,9 @@ function App() {
       .then((drinks) => fillDrinks(drinks))
   }, [])
 
+  function addNewDrink(newDrink) {
+    fillDrinks([...drinks, newDrink]) 
+  }
 
   return (
     <div className="App">
@@ -45,6 +49,7 @@ function App() {
 
 
       <DrinkContainer drinks={drinks} />
+      <DrinkForm addNewDrink={addNewDrink}/>
     </div>
   )
 }
