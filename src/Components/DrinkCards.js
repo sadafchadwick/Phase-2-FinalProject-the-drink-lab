@@ -12,7 +12,7 @@ function DrinkCards( {drink} ) {
             <h2>{name}</h2>
             {/* <p>{alcoholType}</p>
             <p>{ingredients}</p> */}
-            <button className="likeButton">{likes} Likes  🎉</button>
+            <button className="glow-on-hover" type="button">{likes} Likes  🎉</button>
         </div>
     )
 }
