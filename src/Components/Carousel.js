@@ -1,9 +1,16 @@
-// import React from 'react';
+import React from 'react';
 // // import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
 // // import 'pure-react-carousel/dist/react-carousel.es.css';
 // import Carousel from 'flat-carousel';
 
+function Carousel() {
+    return(
+        <div>
 
+        </div>
+    )
+}
+export default Carousel
 // const images = [
 //   { src: 'some image' }
 // ];

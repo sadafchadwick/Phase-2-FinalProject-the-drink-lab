@@ -4,7 +4,7 @@ import { Switch, Route } from "react-router-dom"
 import NavBar from './NavBar';
 import DrinkContainer from './DrinkContainer';
 import Header from './Header';
-
+import Carousel from './Carousel';
 
 
 
@@ -22,8 +22,9 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
+      <Header  className="wholeNav"/>
       <NavBar />
+      <Carousel />
       {/* <CarouselItems drinks={drinks}/> */}
       {/* <Switch>
         <Route exact path="/">

@@ -1,6 +1,6 @@
 import React from "react";
 
-function DrinkCards({ drink }) {
+function DrinkCards( {drink} ) {
     const { id, name, image, cocktail, alcoholType, ingredients, likes } = drink
     return (
         <div className="artboard">
