@@ -1,19 +1,22 @@
 import React from "react";
 
-function DrinkCards(drink) {
-    return(
-    <li className="cards__item">
-    <div className="card">
-      <img
-        src={drink.image}
-        alt={drink.name}
-        className="card__image"
-      />
-      <div className="card__content">
-        <div className="card__title">{drink.name}</div>
+function DrinkCards( {drink} ) {
+    const {id, name, image, cocktail, alcoholType, ingredients, likes} = drink
+    return (
+        <div className="card" key={id}>
+            <img
+                src={image}
+                alt={name}
+                className="card_image"
+            />
+            <h2>{name}</h2>
+            {/* <p>{alcoholType}</p>
+            <p>{ingredients}</p> */}
+            <button className="likeButton">{likes} Likes  🎉</button>
         </div>
-      </div>
-  </li>)
+    )
 }
 
 export default DrinkCards
+
+
