@@ -61,10 +61,10 @@ html {
   }
   @include respond(tab-port) {
    // width < 900?
-   font-size: 50%; // 1rem = 8px, 8/16 = 50
+   font-size: 50%; 
   }
   @include respond(big-desktop) {
-   font-size: 75%; // 1 rem = 12px, 12/16 = 75
+   font-size: 75%;
   }
  }
 body {
@@ -89,11 +89,11 @@ body {
   overflow-y: hidden;
   flex: initial;
   position: relative;
-  height: 30rem;
-  width: 20rem;
+  height: 20rem;
+  width: 15rem;
   -moz-perspective: 200rem;
   perspective: 200rem;
-  margin: 2rem;
+  margin: 1rem;
  
   &__side {
    height: 52rem;
@@ -134,7 +134,7 @@ body {
   &__theme {
    @include absCenter;
    top: 54%;
-   width: 90%;
+   width: 97%;
    text-align: center;
   }
  
@@ -146,7 +146,7 @@ body {
   &__subject {
    font-family: "Inconsolata", monospace;
    letter-spacing: 0.8rem;
-   font-size: 1.6rem;
+   font-size: 0.9rem;
    text-transform: uppercase;
    margin-bottom: 1rem;
   }
@@ -154,7 +154,7 @@ body {
   &__title {
    font-family: "VT323", monospace;
    text-transform: uppercase;
-   font-size: 6rem;
+   font-size: 3rem;
    font-weight: 100;
   }
   
@@ -162,7 +162,7 @@ body {
   &__cover {
    position: relative;
    background-size: cover;
-   height: 14rem;
+   height: 10rem;
    // background-blend-mode: screen;
    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
@@ -180,22 +180,22 @@ body {
    text-align: center;
    color: $color-white;
    @include absCenter;
-   width: 75%;
+   width: 95%;
   }
  
   &__heading-span {
     text-align: center;
    font-family: "VT323", monospace;
-   font-size: 3.2rem;
+   font-size: 1.6rem;
    font-weight: 300;
    text-transform: uppercase;
-   padding: 1rem 1.5rem;
+   padding: 3erem 1.5rem;
    color: $color-white;
   }
  
   &__details {
    font-family: "Inconsolata", monospace;
-   padding: 4rem 2rem;
+   padding: 1rem 2rem;
    ul {
     list-style: none;
     width: 80%;
@@ -203,7 +203,7 @@ body {
  
     li {
      text-align: center;
-     font-size: 1.8rem;
+     font-size: 0.9rem;
      padding: 0.2rem;
      object-fit: contain;
       
@@ -268,9 +268,8 @@ body {
 .card-image {
   max-width: 100%;
   width:  250px;
-  height: 322px;
-  object-fit: cover;
-}
+  height: 300px;
+object-fit:cover;}
 
 
 
@@ -290,36 +289,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-
-
-
 #drink-collection {
-  margin: 2rem;
+  
   columns: 5;
-  column-gap: 1cm;
-}
-
-button {
-  position: relative;
-  background-color: #4be069;
-  border: none;
-  border-radius: 5px;
-  height: 3rem;
-  width: max-content;
-  color: whitesmoke;
-  font-size: 18px;
-  justify-self: center;
-}
-
-.navbutton {
-  position: relative;
-  background-color: #0d63a4;
-  border: 15px;
-  border-radius: 5px;
-  height: 3rem;
-  width: 5rem;
-  color: whitesmoke;
-  font-size: 18px;
-  justify-self: stretch;
+  column-gap: 2cm;
 }
