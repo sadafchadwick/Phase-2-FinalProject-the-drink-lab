@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom"
+import {NavLink} from "react-router-dom"
 
 function NavBar() {
 
@@ -17,10 +17,12 @@ function NavBar() {
       <a>
         <NavLink to="/myrecipebook">MY RECIPE BOOK</NavLink>
       </a>
-      <div className="animation start-home"></div>
+      <div></div>
     </nav>
 
   )
 }
+
+
 
 export default NavBar;

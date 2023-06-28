@@ -4,7 +4,6 @@ import NavBar from './NavBar';
 import DrinkContainer from './DrinkContainer';
 import Header from './Header';
 import DrinkForm from './DrinkForm';
-
 import Carousel from "./Carousel"
 
 
@@ -52,10 +51,10 @@ function App() {
           <DrinkCards />
         </Route>
       </Switch> */}
-      <DrinkContainer drinks={drinks} />
+      <DrinkContainer drinks={drinks} id="drink-collection"/>
       <DrinkForm addNewDrink={addNewDrink}/>
     </div>
-  )
+  )        
 }
 
 export default App;
