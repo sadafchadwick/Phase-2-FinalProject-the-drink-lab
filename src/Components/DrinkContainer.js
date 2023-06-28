@@ -7,7 +7,7 @@ function DrinkContainer({ drinks }) {
         const cards = drinks.map((drink) =>
             <DrinkCards 
                 name={drink.name}
-                id={drink.id}
+                key={drink.id}
                 image ={drink.image}
                 cocktail={drink.cocktail}
                 alcoholType={drink.alcoholType}

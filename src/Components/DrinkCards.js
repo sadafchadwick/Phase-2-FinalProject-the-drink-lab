@@ -1,6 +1,6 @@
 import React from "react";
 
-function DrinkCards({ drink }) {
+function DrinkCards( drink ) {
     const { id, name, image, cocktail, alcoholType, ingredients, likes } = drink
     return (
         <div className="artboard">
@@ -8,7 +8,6 @@ function DrinkCards({ drink }) {
             
                 <div className="card__side card__side--back">
                     <div className="card__cover">
-                     
                         <h4 className="card__heading">
                             <span className="card__heading-span">{name}</span>
                         </h4>

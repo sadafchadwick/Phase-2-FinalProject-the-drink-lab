@@ -26,11 +26,15 @@ function App() {
     fillDrinks([...drinks, newDrink]) 
   }
 
+
+
+  
+
   return (
     <div className="App">
       <Header />
       <NavBar />
-      <Carousel drinks={drinks} />
+      <Carousel />
       {/* <Switch>
         <Route exact path="/">
           <Home />

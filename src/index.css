@@ -256,3 +256,8 @@ nav .start-contact, a:nth-child(5):hover~.animation {
   height: 200px;
   width: 300px;
 }
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
