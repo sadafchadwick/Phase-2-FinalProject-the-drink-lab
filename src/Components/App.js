@@ -21,10 +21,12 @@ function App() {
   }
 
   return (
+    <>
     <div className="App">
       <Header />
       <NavBar />
       <Carousel />
+      </div>
       <Switch>
         <Route exact path="/">
           {/* <Home /> */}
@@ -44,9 +46,11 @@ function App() {
           {/* <DrinkCards /> */}
         </Route>
       </Switch>
+      <div className="App2">
       <DrinkContainer drinks={drinks} id="drink-collection"/>
+      </div>
         <DrinkForm addNewDrink={addNewDrink}/>
-    </div>
+    </>
   )        
 }
 
