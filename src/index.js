@@ -2,7 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {BrowserRouter as Router} from "react-router-dom"
 
+
 import './index.css';
+
 import './index.scss';
 import App from './Components/App';
 // import reportWebVitals from './reportWebVitals';
