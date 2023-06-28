@@ -23,7 +23,7 @@ function App() {
   return (
     <div className="App">
       <Header  className="wholeNav"/>
-      <NavBar />
+      <NavBar className="wholeNav"/>
       <Carousel />
       {/* <CarouselItems drinks={drinks}/> */}
       {/* <Switch>
