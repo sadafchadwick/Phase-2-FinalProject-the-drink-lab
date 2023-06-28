@@ -113,3 +113,16 @@ button {
   font-family: Arial, Helvetica, sans-serif;
   margin: 3px;
 }
+
+.mainHeader {
+  color: blueviolet;
+}
+
+.secondHeader {
+  color: cadetblue;
+}
+
+.cocktailLab {
+  height: 200px;
+  width: 300px;
+}

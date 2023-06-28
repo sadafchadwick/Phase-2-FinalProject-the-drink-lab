@@ -1,6 +1,13 @@
+import cocktailLab from "../Assets/CocktailLab.jpg"
 
 function Header(){
-    <h1>HOME PAGE</h1>
+    return(
+    <>
+        <h1 className="mainHeader">Welcome to Our Drink Lab!</h1>
+        <h3 className="secondHeader">Created by Sadaf Chadwick, Paul Macellaro, and Amelia Freeman</h3>
+        <img className="cocktailLab" src={cocktailLab} alt="Drinks on a Bar Top"/>
+    </>
+    )
 }
 
 export default Header

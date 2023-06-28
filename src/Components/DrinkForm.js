@@ -3,7 +3,7 @@ import {useState} from "react"
 function DrinkForm({addNewDrink}) {
     const [name, setName] = useState("")
     const [image, setImage] = useState("")
-    const [cocktail, setCocktail] = useState(true)
+    const [cocktail, setCocktail] = useState(false)
     const [alcoholType, setAlcoholType] = useState("")
     const [ingredientOne, setIngredientOne] = useState("")
     const [ingredientTwo, setIngredientTwo] = useState("")
@@ -19,7 +19,7 @@ function DrinkForm({addNewDrink}) {
     }
 
     function handleSelect(e) {
-        setCocktail(e.target.value)
+        setCocktail(!cocktail)
     }
 
     function handleAlcoholType(e) {
@@ -47,30 +47,18 @@ function DrinkForm({addNewDrink}) {
         fetch("http://localhost:3000/cocktailsMocktails", {
             method: "POST",
             headers: {
-              "Content-Type": "application/json",
+                'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-                name, image, alcoholType, cocktail, ingredients: 
+                name, image, alcoholType, cocktail: (cocktail ? true : false), ingredients: 
                 [ingredientOne, ingredientTwo, ingredientThree, ingredientFour],
                 likes: 0
             })
           })
           .then(r=> r.json())
-          .then(newData => console.log(newData))
-        const newDrink = {
-            key: name,
-            name: name,
-            image: image, 
-            cocktail: cocktail,
-            alcoholType: alcoholType,
-            ingredients: [ingredientOne, ingredientTwo, ingredientThree, ingredientFour],
-            likes: 0
-        }
-    addNewDrink(newDrink)
+          .then(newDrink => addNewDrink(newDrink))
+          e.target.reset()
     }
-
-
-
     return (
         <div>
             <form onSubmit={handleSubmit}>
