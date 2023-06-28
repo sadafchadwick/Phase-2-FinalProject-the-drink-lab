@@ -17,7 +17,7 @@ function NavBar() {
       <a href="#animation start-contact">MY RECIPE BOOK
         <NavLink to="/myrecipebook"></NavLink>
       </a>
-      <div class="animation start-home"></div>
+      <div className="animation start-home"></div>
     </nav>
 
   )

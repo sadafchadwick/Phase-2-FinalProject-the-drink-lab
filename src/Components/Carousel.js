@@ -1,30 +1,22 @@
-import React from 'react';
-// // import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
-// // import 'pure-react-carousel/dist/react-carousel.es.css';
-// import Carousel from 'flat-carousel';
+import Slider from 'react-animated-slider';
+import 'react-animated-slider/build/horizontal.css';
 
-function Carousel() {
-    return(
-        <div>
+function Carousel(drinks) {
+    <Slider autoplay={3000}>
+        {drinks.map((drink, index) => (
+            <div
+                key={index}
+                style={{ background: `url('${drink.image}') no-repeat center center` }}
+            >
+                <div className="center">
+                    <h1>{drink.title}</h1>
+                    <p>{drink.description}</p>
+                    <button>{drink.button}</button>
+                </div>
+            </div>
+        ))}
+    </Slider>
 
-        </div>
-    )
 }
+
 export default Carousel
-// const images = [
-//   { src: 'some image' }
-// ];
-
-// function MyCarousel (drinks){(
-//   <Carousel>
-//       {drinks.images.map((image, index) => (
-//           <div
-//               key={index}
-//               className="demo-item"
-//               style={{ backgroundImage: 'url(' + image.src + ')' }}
-//           />
-//       ))}
-//   </Carousel>
-// );
-
-// export default MyCarousel
