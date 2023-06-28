@@ -88,11 +88,19 @@ body {
 }
 
 .App {
-  display: flexbox;
+  display: box;
   @include flexCenter;
   padding: 4rem;
   height: 100%;
   position: relative;
+}
+
+  .App2 {
+    display: grid;
+    @include flexCenter;
+    padding: 4rem;
+    height: 100%;
+    position: relative;
 
   @include respond(phone) {
     padding: 1rem;
