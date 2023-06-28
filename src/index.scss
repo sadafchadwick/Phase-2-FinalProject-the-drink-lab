@@ -88,7 +88,7 @@ body {
 }
 
 .App {
-  // display: box;
+  display: flexbox;
   @include flexCenter;
   padding: 4rem;
   height: 100%;
