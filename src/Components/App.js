@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { Switch, Route } from "react-router-dom"
-
+import { Switch, Route } from "react-router-dom" 
 import NavBar from './NavBar';
 import DrinkContainer from './DrinkContainer';
 import Header from './Header';
-import Carousel from './Carousel';
+// import Carousel from "./Carousel"
+
 
 
 
@@ -22,10 +22,9 @@ function App() {
 
   return (
     <div className="App">
-      <Header  className="wholeNav"/>
-      <NavBar className="wholeNav"/>
-      <Carousel />
-      {/* <CarouselItems drinks={drinks}/> */}
+      <Header />
+      <NavBar />
+      {/* <Carousel drinks={drinks}/> */}
       {/* <Switch>
         <Route exact path="/">
           <Home />
