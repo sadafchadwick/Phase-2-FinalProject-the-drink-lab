@@ -4,7 +4,8 @@ import { Switch, Route } from "react-router-dom"
 import NavBar from './NavBar';
 import DrinkContainer from './DrinkContainer';
 import Header from './Header';
-// import Carousel from "./Carousel"
+import DrinkForm from './DrinkForm';
+import Carousel from "./Carousel"
 
 
 
@@ -20,12 +21,15 @@ function App() {
       .then((drinks) => fillDrinks(drinks))
   }, [])
 
+  function addNewDrink(newDrink) {
+    fillDrinks([...drinks, newDrink])
+  }
 
   return (
     <div className="App">
       <Header />
       <NavBar />
-      {/* <Carousel drinks={drinks}/> */}
+      <Carousel drinks={drinks} />
       {/* <Switch>
         <Route exact path="/">
           <Home />
@@ -39,13 +43,14 @@ function App() {
         <Route path="/myrecipebook">
           <MyRecipeBook />
         </Route>
-        {/* <Route exact path="/projects/:id">
+        <Route exact path="/projects/:id">
           <DrinkCards />
-        </Route> */}
-      {/* </Switch> */}
+        </Route>
+      </Switch> */}
 
 
       <DrinkContainer drinks={drinks} />
+      <DrinkForm addNewDrink={addNewDrink} />
     </div>
   )
 }
