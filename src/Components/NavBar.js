@@ -5,9 +5,10 @@ function NavBar() {
 
   return (
     <nav>
-      <NavLink to="/">
-      <a>HOME</a>
-        </NavLink>
+      <>
+      <a>HOME
+      <NavLink to="/"></NavLink>
+      </a>
       <a>COCKTAILS
         <NavLink to="/cocktails"></NavLink>
       </a>
@@ -18,8 +19,9 @@ function NavBar() {
         <NavLink to="/myrecipebook"></NavLink>
       </a>
       <div className="animation start-home"></div>
+      </>
     </nav>
-
+    
   )
 }
 
