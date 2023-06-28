@@ -1,19 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import {useEffect, useState} from 'react'
 import { Switch, Route } from "react-router-dom" 
 import NavBar from './NavBar';
-import DrinkContainer from './DrinkContainer';
 import Header from './Header';
+
+import MyRecipeBook from './MyRecipeBook';
 import DrinkForm from './DrinkForm';
+import DrinkContainer from './DrinkContainer';
+import Home from './Home';
 
-import Carousel from "./Carousel"
-
-
-
-
+// import Carousel from "./Carousel"
 
 
 function App() {
-
   const [drinks, fillDrinks] = useState([])
 
   useEffect(() => {
@@ -26,30 +24,47 @@ function App() {
     fillDrinks([...drinks, newDrink]) 
   }
 
+  const [cocktail, setCocktail] = useState(true)
+
+  function byCocktail(drinks) {
+      if(drinks.cocktail === true) {
+          return true
+      } else {
+        return false
+      }
+      }
+  const filteredDrinks = (cocktail ? drinks.filter( byCocktail ) : drinks )
+  
+
+  function handleClick(value) {
+    setCocktail(value)
+  }
+
   return (
     <div className="App">
       <Header />
+  
       <NavBar />
-      <Carousel drinks={drinks} />
-      {/* <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
+      {/* <Carousel drinks={drinks} /> */}
+      <Switch>
         <Route path="/cocktails">
-          <Cocktails />
+          <DrinkContainer drinks={filteredDrinks} onClick={handleClick(true)}/>
         </Route>
         <Route path="/mocktails">
-          <Mocktails />
+          <DrinkContainer onClick={handleClick(false)}/>
         </Route>
         <Route path="/myrecipebook">
           <MyRecipeBook />
         </Route>
-        <Route exact path="/projects/:id">
-          <DrinkCards />
+        <Route exact path="/">
+          <Home />
         </Route>
-      </Switch> */}
-      <DrinkContainer drinks={drinks} />
-      <DrinkForm addNewDrink={addNewDrink}/>
+      </Switch>
+     
+      <div>
+        {/* <DrinkContainerCocktails drinks={drinks} /> */}
+        <DrinkForm addNewDrink={addNewDrink}/>
+      </div>
     </div>
   )
 }

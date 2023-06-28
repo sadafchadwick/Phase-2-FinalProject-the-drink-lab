@@ -73,7 +73,7 @@ body {
  }
  
  .App {
-  display: flex;
+  display: box;
   @include flexCenter;
   padding: 4rem;
   height: 100%;
@@ -322,4 +322,8 @@ button {
   color: whitesmoke;
   font-size: 18px;
   justify-self: stretch;
+}
+
+#drink-collection {
+  display:box;
 }

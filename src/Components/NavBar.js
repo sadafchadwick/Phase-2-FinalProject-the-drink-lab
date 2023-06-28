@@ -5,17 +5,17 @@ function NavBar() {
 
   return (
     <nav>
-      <a href="#animation animation start-about">HOME
-        <NavLink to="/"></NavLink>
+      <a>
+        <NavLink to="/">Home</NavLink>
       </a>
-      <a href="#animation start-blog">COCKTAILS
-        <NavLink to="/cocktails"></NavLink>
+      <a>
+        <NavLink to="/cocktails">Cocktails</NavLink>
       </a>
-      <a href="#animation start-portefolio">MOCKTAILS
-        <NavLink to="/mocktails"></NavLink>
+      <a>
+        <NavLink to="/mocktails">Mocktails</NavLink>
       </a>
-      <a href="#animation start-contact">MY RECIPE BOOK
-        <NavLink to="/myrecipebook"></NavLink>
+      <a>
+        <NavLink to="/myrecipebook">My Recipe Book</NavLink>
       </a>
       <div className="animation start-home"></div>
     </nav>
