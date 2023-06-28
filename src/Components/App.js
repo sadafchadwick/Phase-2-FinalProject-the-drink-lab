@@ -27,6 +27,8 @@ function App() {
       <NavBar />
       <Carousel />
       </div>
+      <div className="App2">
+      <DrinkContainer drinks={drinks} id="drink-collection"/>
       <Switch>
         <Route exact path="/">
           {/* <Home /> */}
@@ -46,9 +48,7 @@ function App() {
           {/* <DrinkCards /> */}
         </Route>
       </Switch>
-      <div className="App2">
-      <DrinkContainer drinks={drinks} id="drink-collection"/>
-      </div>
+    </div>
         <DrinkForm addNewDrink={addNewDrink}/>
     </>
   )        
