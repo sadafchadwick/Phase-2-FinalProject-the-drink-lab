@@ -1,10 +1,10 @@
+import {useState} from "react"
 
-import { useState } from "react"
-
-function DrinkForm({ addNewDrink }) {
+function DrinkForm({addNewDrink}) {
     const [name, setName] = useState("")
     const [image, setImage] = useState("")
-    const [cocktail, setCocktail] = useState(true)
+    const [cocktail, setCocktail] = useState(false)
+
     const [alcoholType, setAlcoholType] = useState("")
     const [ingredientOne, setIngredientOne] = useState("")
     const [ingredientTwo, setIngredientTwo] = useState("")
@@ -20,7 +20,7 @@ function DrinkForm({ addNewDrink }) {
     }
 
     function handleSelect(e) {
-        setCocktail(e.target.value)
+        setCocktail(!cocktail)
     }
 
     function handleAlcoholType(e) {
@@ -48,39 +48,27 @@ function DrinkForm({ addNewDrink }) {
         fetch("http://localhost:3000/cocktailsMocktails", {
             method: "POST",
             headers: {
-                "Content-Type": "application/json",
+                'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-                name, image, alcoholType, cocktail, ingredients:
-                    [ingredientOne, ingredientTwo, ingredientThree, ingredientFour],
+                name, image, alcoholType, cocktail: (cocktail ? true : false), ingredients: 
+                [ingredientOne, ingredientTwo, ingredientThree, ingredientFour],
                 likes: 0
             })
-        })
-            .then(r => r.json())
-            .then(newData => console.log(newData))
-        const newDrink = {
-            key: name,
-            name: name,
-            image: image,
-            cocktail: cocktail,
-            alcoholType: alcoholType,
-            ingredients: [ingredientOne, ingredientTwo, ingredientThree, ingredientFour],
-            likes: 0
-        }
-        addNewDrink(newDrink)
+          })
+          .then(r=> r.json())
+          .then(newDrink => addNewDrink(newDrink))
+          e.target.reset()
     }
-
-
-
     return (
         <div>
             <form onSubmit={handleSubmit}>
-                <h3
+                <h3 
                     className="add-drink"
                 >
                     Add Your Drink!
                 </h3>
-                <input
+                <input 
                     type="text"
                     name="name"
                     placeholder="Drink name here"
@@ -90,7 +78,7 @@ function DrinkForm({ addNewDrink }) {
                 <br />
                 <input
                     type="text"
-                    name="image"
+                    name="image" 
                     placeholder="Paste image here"
                     className="input-text"
                     onChange={handleImage}
@@ -99,7 +87,7 @@ function DrinkForm({ addNewDrink }) {
                 <select
                     className="select-text"
                     onChange={handleSelect}
-                >
+                >   
                     <option value="True">
                         Is this a cocktail?
                     </option>
@@ -125,31 +113,31 @@ function DrinkForm({ addNewDrink }) {
                     placeholder="Add first ingredient here"
                     className="input-text"
                     onChange={handleIngredientOne}
-                />
+                />  
                 <br />
                 <input
                     type="text"
                     name="Ingredient Two"
-                    placeholder="Add second ingredient here"
+                    placeholder="Add second ingredient here" 
                     className="input-text"
                     onChange={handleIngredientTwo}
                 />
                 <br />
                 <input
                     type="text"
-                    name="Ingredient Three"
+                    name="Ingredient Three" 
                     placeholder="Add third ingredient here"
                     className="input-text"
                     onChange={handleIngredientThree}
                 />
                 <br />
-                <input
+                <input 
                     type="text"
                     name="Ingredient Four"
                     placeholder="Add fourth ingredient here"
                     className="input-text"
                     onChange={handleIngredientFour}
-                />
+                /> 
                 <br />
                 <input
                     type="submit"
@@ -160,6 +148,6 @@ function DrinkForm({ addNewDrink }) {
             </form>
         </div>
     )
-
+}
 
 export default DrinkForm

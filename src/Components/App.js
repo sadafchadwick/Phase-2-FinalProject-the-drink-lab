@@ -4,7 +4,9 @@ import NavBar from './NavBar';
 import DrinkContainer from './DrinkContainer';
 import Header from './Header';
 import DrinkForm from './DrinkForm';
+
 import Carousel from "./Carousel"
+
 
 
 
@@ -21,7 +23,7 @@ function App() {
   }, [])
 
   function addNewDrink(newDrink) {
-    fillDrinks([...drinks, newDrink])
+    fillDrinks([...drinks, newDrink]) 
   }
 
   return (
@@ -46,10 +48,8 @@ function App() {
           <DrinkCards />
         </Route>
       </Switch> */}
-
-
       <DrinkContainer drinks={drinks} />
-      <DrinkForm addNewDrink={addNewDrink} />
+      <DrinkForm addNewDrink={addNewDrink}/>
     </div>
   )
 }

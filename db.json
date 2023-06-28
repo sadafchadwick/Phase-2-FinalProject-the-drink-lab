@@ -199,20 +199,6 @@
         "Lemon Slice Garnish"
       ],
       "likes": 0
-    },
-    {
-      "name": "sadaf",
-      "image": "\"sass\": \"^1.63.6\",",
-      "alcoholType": "",
-      "cocktail": "true",
-      "ingredients": [
-        "",
-        "",
-        "",
-        ""
-      ],
-      "likes": 0,
-      "id": 16
     }
   ]
 }

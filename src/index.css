@@ -186,7 +186,6 @@ nav .start-contact, a:nth-child(5):hover~.animation {
   100% { background-position: 0 0; }
 } */
 
-
 .add-drink {
   border: 2px solid rgb(0, 191, 255);
   border-radius: 5px;
@@ -242,4 +241,18 @@ nav .start-contact, a:nth-child(5):hover~.animation {
   justify-self: center;
   font-family: Arial, Helvetica, sans-serif;
   margin: 3px;
+
+}
+
+.mainHeader {
+  color: blueviolet;
+}
+
+.secondHeader {
+  color: cadetblue;
+}
+
+.cocktailLab {
+  height: 200px;
+  width: 300px;
 }
