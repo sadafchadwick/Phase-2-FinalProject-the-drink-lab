@@ -6,11 +6,6 @@ import Header from './Header';
 import DrinkForm from './DrinkForm';
 import Carousel from "./Carousel"
 
-
-
-
-
-
 function App() {
 
   const [drinks, fillDrinks] = useState([])
@@ -25,34 +20,32 @@ function App() {
     fillDrinks([...drinks, newDrink]) 
   }
 
-
-
-  
-
   return (
     <div className="App">
       <Header />
       <NavBar />
       <Carousel />
-      {/* <Switch>
+      <Switch>
         <Route exact path="/">
-          <Home />
+          {/* <Home /> */}
         </Route>
         <Route path="/cocktails">
-          <Cocktails />
+        <DrinkContainer drinks={drinks} id="drink-collection"/>
+        <DrinkForm addNewDrink={addNewDrink}/>
         </Route>
         <Route path="/mocktails">
-          <Mocktails />
+        <DrinkContainer drinks={drinks} id="drink-collection"/>
+        <DrinkForm addNewDrink={addNewDrink}/>
         </Route>
         <Route path="/myrecipebook">
-          <MyRecipeBook />
+          {/* <MyRecipeBook /> */}
         </Route>
         <Route exact path="/projects/:id">
-          <DrinkCards />
+          {/* <DrinkCards /> */}
         </Route>
-      </Switch> */}
+      </Switch>
       <DrinkContainer drinks={drinks} id="drink-collection"/>
-      <DrinkForm addNewDrink={addNewDrink}/>
+        <DrinkForm addNewDrink={addNewDrink}/>
     </div>
   )        
 }

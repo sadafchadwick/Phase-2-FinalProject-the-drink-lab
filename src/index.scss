@@ -88,7 +88,7 @@ body {
 }
 
 .App {
-  display: flex;
+  // display: box;
   @include flexCenter;
   padding: 4rem;
   height: 100%;
@@ -458,7 +458,7 @@ body {
   }
 
   #drink-collection {
-
-    columns: 5;
+    // display: box;
+    columns: 4;
     column-gap: 2cm;
   }}
