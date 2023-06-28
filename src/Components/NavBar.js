@@ -5,19 +5,19 @@ function NavBar() {
 
   return (
     <nav>
-      <a>
-        <NavLink to="/">HOME</NavLink>
+      <NavLink to="/">
+      <a>HOME</a>
+        </NavLink>
+      <a>COCKTAILS
+        <NavLink to="/cocktails"></NavLink>
       </a>
-      <a>
-        <NavLink to="/cocktails">COCKTAILS</NavLink>
+      <a>MOCKTAILS
+        <NavLink to="/mocktails"></NavLink>
       </a>
-      <a>
-        <NavLink to="/mocktails">MOCKTAILS</NavLink>
+      <a>MY RECIPE BOOK
+        <NavLink to="/myrecipebook"></NavLink>
       </a>
-      <a>
-        <NavLink to="/myrecipebook">MY RECIPE BOOK</NavLink>
-      </a>
-      <div></div>
+      <div className="animation start-home"></div>
     </nav>
 
   )
