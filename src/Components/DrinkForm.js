@@ -4,6 +4,7 @@ function DrinkForm({addNewDrink}) {
     const [name, setName] = useState("")
     const [image, setImage] = useState("")
     const [cocktail, setCocktail] = useState(false)
+
     const [alcoholType, setAlcoholType] = useState("")
     const [ingredientOne, setIngredientOne] = useState("")
     const [ingredientTwo, setIngredientTwo] = useState("")

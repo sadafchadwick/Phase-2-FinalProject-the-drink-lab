@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { Switch, Route } from "react-router-dom"
-
+import { Switch, Route } from "react-router-dom" 
 import NavBar from './NavBar';
 import DrinkContainer from './DrinkContainer';
 import Header from './Header';
 import DrinkForm from './DrinkForm';
+
+import Carousel from "./Carousel"
+
 
 
 
@@ -28,7 +30,7 @@ function App() {
     <div className="App">
       <Header />
       <NavBar />
-      {/* <CarouselItems drinks={drinks}/> */}
+      <Carousel drinks={drinks} />
       {/* <Switch>
         <Route exact path="/">
           <Home />
@@ -42,12 +44,10 @@ function App() {
         <Route path="/myrecipebook">
           <MyRecipeBook />
         </Route>
-        {/* <Route exact path="/projects/:id">
+        <Route exact path="/projects/:id">
           <DrinkCards />
-        </Route> */}
-      {/* </Switch> */}
-
-
+        </Route>
+      </Switch> */}
       <DrinkContainer drinks={drinks} />
       <DrinkForm addNewDrink={addNewDrink}/>
     </div>

@@ -1,23 +1,24 @@
 import React from "react";
-import{Link} from "react-router-dom";
+// import{Link} from "react-router-dom";
 
 import DrinkCards from "./DrinkCards";
-
-
-
 function DrinkContainer({ drinks }) {
-    const cards = drinks.map((drink) =>
-        <DrinkCards key={drink.id} drink={drink} />
+    
+        const cards = drinks.map((drink) =>
+            <DrinkCards 
+                name={drink.name}
+                id={drink.id}
+                image ={drink.image}
+                cocktail={drink.cocktail}
+                alcoholType={drink.alcoholType}
+                ingredients={drink.ingredients}
+                likes={drink.likes} />)
+        return (
+            <div>
+                {cards}
+            </div>
         )
     
-    return (
-        <div id="drink-collection">
-            {/* <Link to={`/coctails/${cocktail}`}> */}
-                {cards}
-            {/* </Link> */}
-        </div>
-    )
-
 }
 
 export default DrinkContainer
