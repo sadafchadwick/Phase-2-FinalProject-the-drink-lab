@@ -14,7 +14,7 @@ function DrinkContainer({ drinks }) {
                 ingredients={drink.ingredients}
                 likes={drink.likes} />)
         return (
-            <div >
+            <div id="drink-collection">
                 {cards}
             </div>
         )
