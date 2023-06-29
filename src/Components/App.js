@@ -44,7 +44,7 @@ function App() {
         <DrinkContainer drinks={drinks.filter(drink => drink.cocktail === false)} id="drink-collection"/>
         </Route>
           <Route path="/drinkform">
-            <DrinkForm addNewDrink={addNewDrink} />
+            <DrinkForm addNewDrink={addNewDrink}/>
           </Route>
         </Switch>
       </div>
