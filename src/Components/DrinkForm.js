@@ -1,10 +1,10 @@
 import { useState } from "react"
-import DrinkCards from "./DrinkCards"
+// import DrinkCards from "./DrinkCards"
 
 function DrinkForm({ addNewDrink }) {
     const [name, setName] = useState("")
     const [image, setImage] = useState("")
-    const [cocktail, setCocktail] = useState(false)
+    const [cocktail, setCocktail] = useState("null")
 
     const [alcoholType, setAlcoholType] = useState("")
     const [ingredientOne, setIngredientOne] = useState("")
@@ -21,7 +21,7 @@ function DrinkForm({ addNewDrink }) {
     }
 
     function handleSelect(e) {
-        setCocktail(!cocktail)
+        setCocktail(e.target.value==="true")
     }
 
     function handleAlcoholType(e) {
@@ -61,17 +61,17 @@ function DrinkForm({ addNewDrink }) {
             .then(newDrink => addNewDrink(newDrink))
         e.target.reset()
 
-        function showNewDrink(newDrink) {
-            return (
-                <DrinkCards
-                    key={e.target.id}
-                    name={e.target.name}
-                    image={e.target.image}
-                    cocktail={e.target.cocktail}
-                    alcoholType={e.target.alcoholType}
-                    ingredients={e.target.ingredients}
-                    likes={e.target.likes} />)
-        }
+        // function showNewDrink(newDrink) {
+        //     return (
+        //         <DrinkCards
+        //             key={e.target.id}
+        //             name={e.target.name}
+        //             image={e.target.image}
+        //             cocktail={e.target.cocktail}
+        //             alcoholType={e.target.alcoholType}
+        //             ingredients={e.target.ingredients}
+        //             likes={e.target.likes} />)
+        // }
 
 
 
@@ -106,15 +106,16 @@ function DrinkForm({ addNewDrink }) {
                 <div className="inputbox" >
                     <select
                         className="select-text"
+                        value={cocktail.toString()}
                         onChange={handleSelect}
                     >
-                        <option value="True">
+                        <option value="">
                             Is this a cocktail?
                         </option>
-                        <option value={cocktail}>
+                        <option value="true">
                             True
                         </option>
-                        <option value={!cocktail}>
+                        <option value="false">
                             False
                         </option>
                     </select>
@@ -179,9 +180,9 @@ function DrinkForm({ addNewDrink }) {
                     />
                 </div>
             </form>
-            <div id="drink-collection">
+            {/* <div id="drink-collection">
                 showNewDrink(newDrink)
-            </div>
+            </div> */}
         </div>
     )
 }
