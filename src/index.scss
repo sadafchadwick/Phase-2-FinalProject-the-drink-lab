@@ -6,7 +6,6 @@ $color-gray-dark: #aaa;
 $color-gray-light: #eee;
 $color-white: #fff;
 
-
 @mixin absCenter {
   position: absolute;
   top: 50%;
@@ -105,18 +104,20 @@ html, body {
 #root {
   display: flex;
   flex-direction: column;
-  height: 100%;
-  width: 100%;
+  justify-content: center; /* Align vertically */
+  align-items: center; /* Align horizontally */
 }
 
 
 #drink-collection {
+  align-items: center;
+  justify-content: center;
 display: flex;
 flex-flow: row;
 flex-wrap: wrap
 }
   .App2 {
-    display: flex; flex-direction: column;
+    display:contents; flex-direction: column;
     @include flexCenter;
     padding: 4rem;
     height: 100%;
@@ -466,11 +467,6 @@ flex-wrap: wrap
     object-fit: cover;
   }
 
-
-
-
-
-
   body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -498,8 +494,12 @@ flex-wrap: wrap
   font-family: "Sansita Swashed", cursive;
 }
 .center {
-  font-family: "Sansita Swashed", cursive;
+  display: grid;
+  @include flexCenter;
+  padding: 3rem;
+  height: 100%;
   position: relative;
+  font-family: "Sansita Swashed", cursive;
   padding: 50px 50px;
   background-image: linear-gradient(to right bottom,
   rgba($color-primary-dark, 0.65),
@@ -521,7 +521,7 @@ url(https://cdn.spacetelescope.org/archives/images/screen/heic0406a.jpg);
   position: relative;
   width: 300px;
   height: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 15px;
 }
 .center .inputbox input {
   color: #ece0e8;
@@ -560,4 +560,10 @@ url(https://cdn.spacetelescope.org/archives/images/screen/heic0406a.jpg);
 }
 .center .inputbox:hover [type="submit"] {
   background: linear-gradient(45deg, greenyellow, dodgerblue);
+}
+.exampleCard {
+  position: absolute;
+  display: box;
+  top: 1;
+  left: 800px;
 }

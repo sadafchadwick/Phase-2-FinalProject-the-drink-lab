@@ -1,4 +1,5 @@
 import { useState } from "react"
+// import DrinkCards from "./DrinkCards"
 
 function DrinkForm({ addNewDrink }) {
 
@@ -61,8 +62,9 @@ function DrinkForm({ addNewDrink }) {
             body: JSON.stringify({newDrinkObj})
         })
             .then(r => r.json())
-            .then(newDrinkData => addNewDrink(newDrinkData))
-            e.target.reset()
+
+            .then(newDrink => addNewDrink(newDrink))
+        e.target.reset()
     }
     return (
         <div className="center">
@@ -160,9 +162,40 @@ function DrinkForm({ addNewDrink }) {
                     />
                 </div>
             </form>
-            <div>
+        <div className="exampleCard">
+            <div className="card" key={cocktail.id}>
+            
+                <div className="card__side card__side--back">
+                    <div className="card__cover">
+                        <h4 className="card__heading">
+                            <span className="card__heading-span">{name}</span>
+                        </h4>
+                        </div>
+                        <div className="card__details">
+                            <ul>
+                                <li>{alcoholType}</li>
+                                <li>{ingredientOne}</li>
+                                <li>{ingredientTwo}</li>
+                                <li>{ingredientThree}</li>
+                            </ul>
+                    </div>
+                        </div>
+                        <div className="card__side card__side--front">
+                        <span className="card__heading-span">{name}</span>
+                        <img className="card-image"
+                            src={image}
+        
+                        />
+                            <div className="card__theme">
+                        
+                                <div className="card__theme-box">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
             </div>
         </div>
+        
     )
 }
 
