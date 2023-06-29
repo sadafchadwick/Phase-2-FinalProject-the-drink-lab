@@ -21,7 +21,7 @@ function DrinkForm({ addNewDrink }) {
     }
 
     function handleSelect(e) {
-        setCocktail(e.target.value==="true")
+        setCocktail(e.target.value === "true");
     }
 
     function handleAlcoholType(e) {
@@ -109,15 +109,9 @@ function DrinkForm({ addNewDrink }) {
                         value={cocktail.toString()}
                         onChange={handleSelect}
                     >
-                        <option value="">
-                            Is this a cocktail?
-                        </option>
-                        <option value="true">
-                            True
-                        </option>
-                        <option value="false">
-                            False
-                        </option>
+                        <option value="">Is this a cocktail?</option>
+                        <option value="true">True</option>
+                        <option value="false">False</option>
                     </select>
                 </div>
                 <br />

@@ -86,6 +86,7 @@ body {
   background-color: $background-color;
 }
 .App3{
+
   display: box;
   width: 80%;
 } 
@@ -555,6 +556,6 @@ url(https://cdn.spacetelescope.org/archives/images/screen/heic0406a.jpg);
   color: #fff;
   border: #fff;
 }
-.center .inputbox:hover [type="button"] {
+.center .inputbox:hover [type="submit"] {
   background: linear-gradient(45deg, greenyellow, dodgerblue);
 }
