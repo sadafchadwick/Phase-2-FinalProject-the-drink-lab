@@ -2,10 +2,10 @@ import { useState } from "react"
 // import DrinkCards from "./DrinkCards"
 
 function DrinkForm({ addNewDrink }) {
+
     const [name, setName] = useState("")
     const [image, setImage] = useState("")
     const [cocktail, setCocktail] = useState("null")
-
     const [alcoholType, setAlcoholType] = useState("")
     const [ingredientOne, setIngredientOne] = useState("")
     const [ingredientTwo, setIngredientTwo] = useState("")
@@ -46,43 +46,32 @@ function DrinkForm({ addNewDrink }) {
 
     function handleSubmit(e) {
         e.preventDefault();
+        const newDrinkObj = {
+            name, 
+            image, 
+            alcoholType, 
+            cocktail: (cocktail ? true : false), 
+            ingredients: [ingredientOne, ingredientTwo, ingredientThree, ingredientFour],
+            likes: 0
+        }
         fetch("http://localhost:3000/cocktailsMocktails", {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({
-                name, image, alcoholType, cocktail: (cocktail ? true : false), ingredients:
-                    [ingredientOne, ingredientTwo, ingredientThree, ingredientFour],
-                likes: 0
-            })
+            body: JSON.stringify({newDrinkObj})
         })
             .then(r => r.json())
+
             .then(newDrink => addNewDrink(newDrink))
+
             e.target.reset()
-
-        // function showNewDrink(newDrink) {
-        //     return (
-        //         <DrinkCards
-        //             key={e.target.id}
-        //             name={e.target.name}
-        //             image={e.target.image}
-        //             cocktail={e.target.cocktail}
-        //             alcoholType={e.target.alcoholType}
-        //             ingredients={e.target.ingredients}
-        //             likes={e.target.likes} />)
-        // }
-
-
-
-
     }
     return (
         <div className="center">
             <form onSubmit={handleSubmit}>
 
-                <h1
-                >
+                <h1>
                     Add Your Drink!
                 </h1>
                 <div className="inputbox" >
@@ -174,9 +163,6 @@ function DrinkForm({ addNewDrink }) {
                     />
                 </div>
             </form>
-            {/* <div id="drink-collection">
-                showNewDrink(newDrink)
-            </div> */}
         <div className="exampleCard">
             <div className="card" key={cocktail.id}>
             

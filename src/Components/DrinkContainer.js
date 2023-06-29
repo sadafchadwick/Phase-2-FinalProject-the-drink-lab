@@ -1,5 +1,3 @@
-
-// import{Link} from "react-router-dom";
 import DrinkCards from "./DrinkCards";
 
 function DrinkContainer({drinks}) {
