@@ -3,7 +3,7 @@ import { useState } from "react"
 function DrinkForm({ addNewDrink }) {
     const [name, setName] = useState("")
     const [image, setImage] = useState("")
-    const [cocktail, setCocktail] = useState(false)
+    const [cocktail, setCocktail] = useState("null")
 
     const [alcoholType, setAlcoholType] = useState("")
     const [ingredientOne, setIngredientOne] = useState("")
@@ -20,7 +20,7 @@ function DrinkForm({ addNewDrink }) {
     }
 
     function handleSelect(e) {
-        setCocktail(!cocktail)
+        setCocktail(e.target.value === "true");
     }
 
     function handleAlcoholType(e) {
@@ -68,98 +68,93 @@ function DrinkForm({ addNewDrink }) {
                 >
                     Add Your Drink!
                 </h1>
-            <div className="inputbox" >
-                <input
-                    type="text"
-                    name="name"
-                    placeholder="Drink name here"
-                    onChange={handleNameChange}
-                />
+                <div className="inputbox" >
+                    <input
+                        type="text"
+                        name="name"
+                        placeholder="Drink name here"
+                        onChange={handleNameChange}
+                    />
                 </div>
                 <br />
                 <div className="inputbox" >
-                <input 
-                    type="text"
-                    name="image"
-                    placeholder="Paste image here"
-                    onChange={handleImage}
-                />
+                    <input
+                        type="text"
+                        name="image"
+                        placeholder="Paste image here"
+                        onChange={handleImage}
+                    />
                 </div>
                 <br />
                 <div className="inputbox" >
-                <select
-                    className="select-text"
-                    onChange={handleSelect}
-                >
-                    <option value="True">
-                        Is this a cocktail?
-                    </option>
-                    <option value={cocktail}>
-                        True
-                    </option>
-                    <option value={!cocktail}>
-                        False
-                    </option>
-                </select>
+                    <select
+                        className="select-text"
+                        value={cocktail.toString()}
+                        onChange={handleSelect}
+                    >
+                        <option value="">Is this a cocktail?</option>
+                        <option value="true">True</option>
+                        <option value="false">False</option>
+                    </select>
                 </div>
                 <br />
                 <div className="inputbox" >
 
-                <input className="inputbox"
-                    type="text"
-                    name="Alcohol Type"
-                    placeholder="Alcohol type here"
-                    onChange={handleAlcoholType}
-                />
+                    <input className="inputbox"
+                        type="text"
+                        name="Alcohol Type"
+                        placeholder="Alcohol type here"
+                        onChange={handleAlcoholType}
+                    />
                 </div>
                 <br />
                 <div className="inputbox" >
 
-                <input className="inputbox"
-                    type="text"
-                    name="Ingredient One"
-                    placeholder="Add first ingredient here"
-                    onChange={handleIngredientOne}
-                />
+                    <input className="inputbox"
+                        type="text"
+                        name="Ingredient One"
+                        placeholder="Add first ingredient here"
+                        onChange={handleIngredientOne}
+                    />
                 </div>
                 <br />
                 <div className="inputbox" >
 
-                <input className="inputbox"
-                    type="text"
-                    name="Ingredient Two"
-                    placeholder="Add second ingredient here"
-                    onChange={handleIngredientTwo}
-                />
+                    <input className="inputbox"
+                        type="text"
+                        name="Ingredient Two"
+                        placeholder="Add second ingredient here"
+                        onChange={handleIngredientTwo}
+                    />
                 </div>
                 <br />
-            <div className="inputbox">
-                <input className="inputbox"
-                    type="text"
-                    name="Ingredient Three"
-                    placeholder="Add third ingredient here"
-                    onChange={handleIngredientThree}
-                />
-                </div>
-                <br />
-                <div className="inputbox" >
-
-                <input className="inputbox"
-                    type="text"
-                    name="Ingredient Four"
-                    placeholder="Add fourth ingredient here"
-                    onChange={handleIngredientFour}
-                />
+                <div className="inputbox">
+                    <input className="inputbox"
+                        type="text"
+                        name="Ingredient Three"
+                        placeholder="Add third ingredient here"
+                        onChange={handleIngredientThree}
+                    />
                 </div>
                 <br />
                 <div className="inputbox" >
 
-                <input
-                    type="button"
-                    name="submit"
-                    value="Create New Drink"
-                    className="submit"
-                />
+                    <input className="inputbox"
+                        type="text"
+                        name="Ingredient Four"
+                        placeholder="Add fourth ingredient here"
+                        onChange={handleIngredientFour}
+                    />
+                </div>
+                <br />
+                <div className="inputbox" >
+
+                    <input
+                        type="submit"
+                        name="submit"
+                        value="Create New Drink"
+                        className="submit"
+                    />
                 </div>
             </form>
         </div>
