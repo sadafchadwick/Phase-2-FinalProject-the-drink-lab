@@ -1,5 +1,4 @@
 import { useState } from "react"
-// import DrinkCards from "./DrinkCards"
 
 function DrinkForm({ addNewDrink }) {
 
@@ -59,7 +58,7 @@ function DrinkForm({ addNewDrink }) {
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({newDrinkObj})
+            body: JSON.stringify(newDrinkObj)
         })
             .then(r => r.json())
 
