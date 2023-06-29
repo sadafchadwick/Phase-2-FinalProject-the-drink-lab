@@ -7,8 +7,7 @@ import MyRecipeBook from './MyRecipeBook';
 import DrinkForm from './DrinkForm';
 import DrinkContainer from './DrinkContainer';
 import Home from './Home';
-
-// import Carousel from "./Carousel"
+import Carousel from "./Carousel"
 
 
 function App() {
@@ -41,32 +40,37 @@ function App() {
   }
 
   return (
+    <>
     <div className="App">
       <Header />
-  
       <NavBar />
-      {/* <Carousel drinks={drinks} /> */}
+      <Carousel />
+      </div>
+      <div className="App2">
+      <DrinkContainer drinks={drinks} id="drink-collection"/>
       <Switch>
+        <Route exact path="/">
+          {/* <Home /> */}
+        </Route>
         <Route path="/cocktails">
-          <DrinkContainer drinks={filteredDrinks} onClick={handleClick(true)}/>
+        <DrinkContainer drinks={drinks} drinks={filteredDrinks} onClick={handleClick(true)} id="drink-collection"/>
+        <DrinkForm addNewDrink={addNewDrink}/>
         </Route>
         <Route path="/mocktails">
-          <DrinkContainer onClick={handleClick(false)}/>
+        <DrinkContainer drinks={drinks} onClick={handleClick(false)} id="drink-collection"/>
+        <DrinkForm addNewDrink={addNewDrink}/>
         </Route>
         <Route path="/myrecipebook">
-          <MyRecipeBook />
+          {/* <MyRecipeBook /> */}
         </Route>
-        <Route exact path="/">
-          <Home />
+        <Route exact path="/projects/:id">
+          {/* <DrinkCards /> */}
         </Route>
       </Switch>
-     
-      <div>
-        {/* <DrinkContainerCocktails drinks={drinks} /> */}
-        <DrinkForm addNewDrink={addNewDrink}/>
-      </div>
     </div>
-  )
+        <DrinkForm addNewDrink={addNewDrink}/>
+    </>
+  )        
 }
 
 export default App;

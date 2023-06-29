@@ -5,22 +5,16 @@ function NavBar() {
 
   return (
     <nav>
-      <a>
-        <NavLink to="/">Home</NavLink>
-      </a>
-      <a>
-        <NavLink to="/cocktails">Cocktails</NavLink>
-      </a>
-      <a>
-        <NavLink to="/mocktails">Mocktails</NavLink>
-      </a>
-      <a>
-        <NavLink to="/myrecipebook">My Recipe Book</NavLink>
-      </a>
+      <NavLink to="/">HOME</NavLink>
+      <NavLink to="/cocktails">COCKTAILS</NavLink>
+      <NavLink to="/mocktails">MOCKTAILS</NavLink>
+      <NavLink to="/myrecipebook">MY RECIPE BOOK</NavLink>
       <div className="animation start-home"></div>
     </nav>
 
   )
 }
+
+
 
 export default NavBar;

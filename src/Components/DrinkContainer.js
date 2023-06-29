@@ -8,14 +8,14 @@ function DrinkContainer({drinks}) {
             <DrinkCards 
                 key={drink.id}
                 name={drink.name}
-                id={drink.id}
+                key={drink.id}
                 image ={drink.image}
                 cocktail={drink.cocktail}
                 alcoholType={drink.alcoholType}
                 ingredients={drink.ingredients}
                 likes={drink.likes} />)
         return (
-            <div>
+            <div id="drink-collection">
                 {cards}
             </div>
         )

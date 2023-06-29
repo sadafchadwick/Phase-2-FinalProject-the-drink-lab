@@ -8,7 +8,6 @@ function DrinkCards( drink ) {
             
                 <div className="card__side card__side--back">
                     <div className="card__cover">
-                     
                         <h4 className="card__heading">
                             <span className="card__heading-span">{name}</span>
                         </h4>
@@ -24,12 +23,12 @@ function DrinkCards( drink ) {
                         </div>
                         <div className="card__side card__side--front">
                         <span className="card__heading-span">{name}</span>
-
-                            <div className="card__theme">
-                            <img className="card-image"
+                        <img className="card-image"
                             src={image}
                             alt={name}
                         />
+                            <div className="card__theme">
+                        
                                 <div className="card__theme-box">
                                 </div>
                             </div>
