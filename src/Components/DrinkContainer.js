@@ -1,11 +1,12 @@
-import React from "react";
-// import{Link} from "react-router-dom";
 
+// import{Link} from "react-router-dom";
 import DrinkCards from "./DrinkCards";
-function DrinkContainer({ drinks }) {
+
+function DrinkContainer({drinks}) {
     
         const cards = drinks.map((drink) =>
             <DrinkCards 
+                key={drink.id}
                 name={drink.name}
                 key={drink.id}
                 image ={drink.image}

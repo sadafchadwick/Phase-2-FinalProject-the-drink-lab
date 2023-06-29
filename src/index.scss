@@ -85,7 +85,6 @@ html {
 body {
   height: 100vh;
   background-color: $background-color;
-}
 
 .App {
   display: box;
@@ -480,5 +479,9 @@ flex-wrap: wrap
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
       monospace;
   }
+}
+
+#drink-collection {
+  display:box;
 }
 
