@@ -33,7 +33,6 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Carousel />
-            {/* <DrinkContainer drinks={drinks} /> */}
           </Route>
           <Route path="/aboutus">
             <AboutUs />
