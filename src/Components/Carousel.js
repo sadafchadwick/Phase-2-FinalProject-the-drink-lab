@@ -42,7 +42,7 @@ function Carousel() {
 
     ];
     return (
-        <div className="App">
+        <div className="App3">
             <h1>THE DRINK LAB</h1>
             <SmartSlider
                 slides={slidesArray}
