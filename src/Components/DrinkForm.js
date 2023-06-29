@@ -63,9 +63,7 @@ function DrinkForm({ addNewDrink }) {
     return (
         <div>
             <form onSubmit={handleSubmit}>
-                <h3
-                    className="add-drink"
-                >
+                <h3 className="add-drink">
                     Add Your Drink!
                 </h3>
                 <input

@@ -48,6 +48,7 @@ function Carousel() {
                 slides={slidesArray}
                 // buttonShape="square" // round or square
                 autoSlide={true}
+                autoSlideInterval= "500"
             />
         </div>
     );

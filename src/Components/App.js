@@ -1,13 +1,13 @@
-import {useEffect, useState} from 'react'
-import { Switch, Route } from "react-router-dom" 
+import { useEffect, useState } from 'react'
+import { Switch, Route } from "react-router-dom"
 import NavBar from './NavBar';
 import Header from './Header';
 
-import MyRecipeBook from './MyRecipeBook';
+
 import DrinkForm from './DrinkForm';
 import DrinkContainer from './DrinkContainer';
-import Home from './Home';
 import Carousel from "./Carousel"
+import AboutUs from "./AboutUs"
 
 
 function App() {
@@ -20,20 +20,20 @@ function App() {
   }, [])
 
   function addNewDrink(newDrink) {
-    fillDrinks([...drinks, newDrink]) 
+    fillDrinks([...drinks, newDrink])
   }
 
   const [cocktail, setCocktail] = useState(true)
 
   function byCocktail(drinks) {
-      if(drinks.cocktail === true) {
-          return true
-      } else {
-        return false
-      }
-      }
-  const filteredDrinks = (cocktail ? drinks.filter( byCocktail ) : drinks )
-  
+    if (drinks.cocktail === true) {
+      return true
+    } else {
+      return false
+    }
+  }
+  const filteredDrinks = (cocktail ? drinks.filter(byCocktail) : drinks)
+
 
   function handleClick(value) {
     setCocktail(value)
@@ -41,36 +41,29 @@ function App() {
 
   return (
     <>
-    <div className="App">
-      <Header />
-      <NavBar />
-      <Carousel />
+      <div className="App">
+        <Header />
+        <NavBar />
       </div>
-      <div className="App2">
-      <DrinkContainer drinks={drinks} id="drink-collection"/>
-      <Switch>
-        <Route exact path="/">
-          {/* <Home /> */}
-        </Route>
-        <Route path="/cocktails">
-        <DrinkContainer drinks={drinks} drinks={filteredDrinks} onClick={handleClick(true)} id="drink-collection"/>
-        <DrinkForm addNewDrink={addNewDrink}/>
-        </Route>
-        <Route path="/mocktails">
-        <DrinkContainer drinks={drinks} onClick={handleClick(false)} id="drink-collection"/>
-        <DrinkForm addNewDrink={addNewDrink}/>
-        </Route>
-        <Route path="/myrecipebook">
-          {/* <MyRecipeBook /> */}
-        </Route>
-        <Route exact path="/projects/:id">
-          {/* <DrinkCards /> */}
-        </Route>
-      </Switch>
-    </div>
-        <DrinkForm addNewDrink={addNewDrink}/>
+      <div className="drink-collection">
+        <Switch>
+          <Route exact path="/">
+            <Carousel />
+            {/* <DrinkContainer drinks={drinks} /> */}
+          </Route>
+          <Route path="/aboutus">
+            <AboutUs />
+          </Route>
+          <Route path="/drinks">
+            <DrinkContainer drinks={filteredDrinks} onClick={() => handleClick(true)} id="drink-collection" />
+          </Route>
+          <Route path="/drinkform">
+            <DrinkForm addNewDrink={addNewDrink} />
+          </Route>
+        </Switch>
+      </div>
     </>
-  )        
+  )
 }
 
 export default App;
