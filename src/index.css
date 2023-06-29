@@ -165,7 +165,7 @@ nav .start-drinkform, a:nth-child(4):hover~.animation {
   100% { background-position: 0 0; }
 } */
 
-.add-drink {
+/* .add-drink {
   border: 2px solid rgb(0, 191, 255);
   border-radius: 5px;
   height: 2rem;
@@ -234,7 +234,7 @@ nav .start-drinkform, a:nth-child(4):hover~.animation {
 .cocktailLab {
   height: 200px;
   width: 300px;
-}
+} */
 
 /* .App {
   font-family: sans-serif;
