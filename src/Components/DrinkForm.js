@@ -1,4 +1,5 @@
 import { useState } from "react"
+// import DrinkCards from "./DrinkCards"
 
 function DrinkForm({ addNewDrink }) {
     const [name, setName] = useState("")
@@ -59,6 +60,22 @@ function DrinkForm({ addNewDrink }) {
             .then(r => r.json())
             .then(newDrink => addNewDrink(newDrink))
         e.target.reset()
+
+        // function showNewDrink(newDrink) {
+        //     return (
+        //         <DrinkCards
+        //             key={e.target.id}
+        //             name={e.target.name}
+        //             image={e.target.image}
+        //             cocktail={e.target.cocktail}
+        //             alcoholType={e.target.alcoholType}
+        //             ingredients={e.target.ingredients}
+        //             likes={e.target.likes} />)
+        // }
+
+
+
+
     }
     return (
         <div className="center">
@@ -157,6 +174,9 @@ function DrinkForm({ addNewDrink }) {
                     />
                 </div>
             </form>
+            {/* <div id="drink-collection">
+                showNewDrink(newDrink)
+            </div> */}
         </div>
     )
 }
