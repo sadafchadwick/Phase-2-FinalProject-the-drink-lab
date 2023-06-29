@@ -59,7 +59,7 @@ function DrinkForm({ addNewDrink }) {
         })
             .then(r => r.json())
             .then(newDrink => addNewDrink(newDrink))
-        e.target.reset()
+            e.target.reset()
 
         // function showNewDrink(newDrink) {
         //     return (
