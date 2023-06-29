@@ -1,13 +1,13 @@
-import {useEffect, useState} from 'react'
-import { Switch, Route } from "react-router-dom" 
+import { useEffect, useState } from 'react'
+import { Switch, Route } from "react-router-dom"
 import NavBar from './NavBar';
 import Header from './Header';
 
-import MyRecipeBook from './MyRecipeBook';
+
 import DrinkForm from './DrinkForm';
 import DrinkContainer from './DrinkContainer';
-import Home from './Home';
 import Carousel from "./Carousel"
+import AboutUs from "./AboutUs"
 
 
 function App() {
@@ -20,41 +20,37 @@ function App() {
   }, [])
 
   function addNewDrink(newDrink) {
-    fillDrinks([...drinks, newDrink]) 
+    fillDrinks([...drinks, newDrink])
   }
-
 
   return (
     <>
-    <div className="App">
-      <Header />
-      <NavBar />
-      <Carousel />
+      <div className="App">
+        <Header />
+        <NavBar />
       </div>
       <div className="App2">
-      <Switch>
-        <Route exact path="/">
-          {/* <Home /> */}
-        </Route>
-        <Route path="/cocktails" >
+        <Switch>
+          <Route exact path="/">
+            <Carousel />
+            {/* <DrinkContainer drinks={drinks} /> */}
+          </Route>
+          <Route path="/aboutus">
+            <AboutUs />
+          </Route>
+      <Route path="/cocktails" >
         <DrinkContainer drinks={drinks.filter(drink => drink.cocktail === true)} id="drink-collection"/>
-        <DrinkForm addNewDrink={addNewDrink}/>
         </Route>
         <Route path="/mocktails">
         <DrinkContainer drinks={drinks.filter(drink => drink.cocktail === false)} id="drink-collection"/>
-        <DrinkForm addNewDrink={addNewDrink}/>
         </Route>
-        <Route path="/myrecipebook">
-          {/* <MyRecipeBook /> */}
-        </Route>
-        <Route exact path="/projects/:id">
-          {/* <DrinkCards /> */}
-        </Route>
-      </Switch>
-    </div>
-        <DrinkForm addNewDrink={addNewDrink}/>
+          <Route path="/drinkform">
+            <DrinkForm addNewDrink={addNewDrink} />
+          </Route>
+        </Switch>
+      </div>
     </>
-  )        
+  )
 }
 
 export default App;

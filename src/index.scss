@@ -6,7 +6,6 @@ $color-gray-dark: #aaa;
 $color-gray-light: #eee;
 $color-white: #fff;
 
-
 @mixin absCenter {
   position: absolute;
   top: 50%;
@@ -87,206 +86,62 @@ body {
   background-color: $background-color;
 }
 
-.App {
-  display: box;
-  @include flexCenter;
-  padding: 4rem;
-  height: 100%;
-  position: relative;
-}
-html, body {
-  height: 100vw;
-  width: 100%;
-}
-#root {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  width: 100%;
-}
+  .App {
+    display: inline-box;
+    @include flexCenter;
+    padding: 4rem;
+    height: 100%;
+    position: relative;
+  }
+
+  html,
+  body {
+    height: 100vw;
+    width: 100%;
+  }
+
+  #root {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
 
 
-#drink-collection {
-display: flex;
-flex-flow: row;
-flex-wrap: wrap
-}
+  #drink-collection {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap
+  }
+
   .App2 {
-    display: flex; flex-direction: column;
+    display: flexbox;
+    flex-direction: column;
     @include flexCenter;
     padding: 4rem;
     height: 100%;
     position: relative;
 
-  @include respond(phone) {
-    padding: 1rem;
-  }
-}
-
-.card {
-  max-height: 80%;
-  overflow-y: hidden;
-  flex: initial;
-  position: relative;
-  height: 20rem;
-  width: 15rem;
-  -moz-perspective: 200rem;
-  perspective: 200rem;
-  margin: 1rem;
-
-  &__side {
-    height: 52rem;
-    transition: all 0.8s ease;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    -webkit-backface-visibility: hidden;
-    /* We don't want to see the back part of the element. */
-    backface-visibility: hidden;
-    /* We don't want to see the back part of the element. */
-    border-radius: 3px;
-    overflow: hidden;
-    /* The image is overflowing the parent. */
-    box-shadow: 0 2rem 6rem rgba($color-black, 0.15);
-
-    &--front {
-      background-image: linear-gradient(to right bottom,
-          rgba($color-primary-dark, 0.65),
-          rgba($color-primary-light, 0.7)),
-        url(https://cdn.spacetelescope.org/archives/images/screen/heic0406a.jpg);
-    }
-
-    &--back {
-      background-color: $color-white;
-      transform: rotateY(180deg);
+    @include respond(phone) {
+      padding: 1rem;
     }
   }
 
-  &:hover &__side--back {
-    transform: rotateY(0);
-  }
-
-  &:hover &__side--front {
-    transform: rotateY(-180deg);
-  }
-
-  // Front side of the card
-  &__theme {
-    @include absCenter;
-    top: 54%;
-    width: 97%;
-    text-align: center;
-  }
-
-  &__theme-box {
-    color: $color-white;
-    margin-bottom: 8rem;
-  }
-
-  &__subject {
-    font-family: "Inconsolata", monospace;
-    letter-spacing: 0.8rem;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-  }
-
-  &__title {
-    font-family: "VT323", monospace;
-    text-transform: uppercase;
-    font-size: 3rem;
-    font-weight: 100;
-  }
-
-  // Back side of the card
-  &__cover {
+  .card {
+    max-height: 80%;
+    overflow-y: hidden;
+    flex: initial;
     position: relative;
-    background-size: cover;
-    height: 10rem;
-    // background-blend-mode: screen;
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
-    background-image: linear-gradient(to top right,
-        rgba($color-primary-dark, 0.65),
-        rgba($color-primary-light, 0.65)),
-      url(https://cdn.spacetelescope.org/archives/images/screen/heic0406a.jpg);
-  }
-
-  &__heading {
-    text-align: center;
-    color: $color-white;
-    @include absCenter;
-    width: 95%;
-  }
-
-  &__heading-span {
-    text-align: center;
-    font-family: "VT323", monospace;
-    font-size: 1.6rem;
-    font-weight: 300;
-    text-transform: uppercase;
-    padding: 3erem 1.5rem;
-    color: $color-white;
-  }
-
-  &__details {
-    font-family: "Inconsolata", monospace;
-    padding: 1rem 2rem;
-
-    ul {
-      list-style: none;
-      width: 80%;
-      margin: 0 auto;
-
-      li {
-        text-align: center;
-        font-size: 0.9rem;
-        padding: 0.2rem;
-        object-fit: contain;
-
-        &:not(:last-child) {
-          border-bottom: 1px solid $color-gray-light;
-        }
-      }
-    }
-  }
-
-  // Responsivity
-  @media only screen and (max-width: 37.5em),
-  only screen and (hover: none) {
-    height: auto;
-    border-radius: 3px;
-    background-color: $color-white;
-    box-shadow: 0 2rem 6rem rgba($color-black, 0.15);
+    height: 20rem;
+    width: 15rem;
+    -moz-perspective: 200rem;
+    perspective: 200rem;
+    margin: 1rem;
 
     &__side {
-      height: auto;
-      position: relative;
-      box-shadow: none;
-
-      &--front {
-        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
-      }
-
-      &--back {
-        transform: rotateY(0);
-      }
-    }
-
-    &:hover &__side--front {
-      transform: rotateY(0);
-    }
-
-    &__details {
-      padding: 3rem 2rem;
-    }
-
-    // Front side responsive styling
-    &__theme {
-      position: relative;
+      height: 52rem;
+      transition: all 0.8s ease;
+      position: absolute;
       top: 0;
       left: 0;
       width: 100%;
@@ -324,7 +179,7 @@ flex-wrap: wrap
     &__theme {
       @include absCenter;
       top: 54%;
-      width: 90%;
+      width: 97%;
       text-align: center;
     }
 
@@ -336,7 +191,7 @@ flex-wrap: wrap
     &__subject {
       font-family: "Inconsolata", monospace;
       letter-spacing: 0.8rem;
-      font-size: 1.6rem;
+      font-size: 0.9rem;
       text-transform: uppercase;
       margin-bottom: 1rem;
     }
@@ -344,7 +199,7 @@ flex-wrap: wrap
     &__title {
       font-family: "VT323", monospace;
       text-transform: uppercase;
-      font-size: 6rem;
+      font-size: 3rem;
       font-weight: 100;
     }
 
@@ -352,7 +207,7 @@ flex-wrap: wrap
     &__cover {
       position: relative;
       background-size: cover;
-      height: 14rem;
+      height: 10rem;
       // background-blend-mode: screen;
       -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
       clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
@@ -368,22 +223,22 @@ flex-wrap: wrap
       text-align: center;
       color: $color-white;
       @include absCenter;
-      width: 75%;
+      width: 95%;
     }
 
     &__heading-span {
       text-align: center;
       font-family: "VT323", monospace;
-      font-size: 3.2rem;
+      font-size: 1.6rem;
       font-weight: 300;
       text-transform: uppercase;
-      padding: 1rem 1.5rem;
+      padding: 3erem 1.5rem;
       color: $color-white;
     }
 
     &__details {
       font-family: "Inconsolata", monospace;
-      padding: 4rem 2rem;
+      padding: 1rem 2rem;
 
       ul {
         list-style: none;
@@ -392,7 +247,7 @@ flex-wrap: wrap
 
         li {
           text-align: center;
-          font-size: 1.8rem;
+          font-size: 0.9rem;
           padding: 0.2rem;
           object-fit: contain;
 
@@ -438,43 +293,145 @@ flex-wrap: wrap
         position: relative;
         top: 0;
         left: 0;
-        transform: translate(0);
         width: 100%;
-        padding: 5rem 4rem 1.5rem 4rem;
-        text-align: right;
+        -webkit-backface-visibility: hidden;
+        /* We don't want to see the back part of the element. */
+        backface-visibility: hidden;
+        /* We don't want to see the back part of the element. */
+        border-radius: 3px;
+        overflow: hidden;
+        /* The image is overflowing the parent. */
+        box-shadow: 0 2rem 6rem rgba($color-black, 0.15);
+
+        &--front {
+          background-image: linear-gradient(to right bottom,
+              rgba($color-primary-dark, 0.65),
+              rgba($color-primary-light, 0.7)),
+            url(https://cdn.spacetelescope.org/archives/images/screen/heic0406a.jpg);
+        }
+
+        &--back {
+          background-color: $color-white;
+          transform: rotateY(180deg);
+        }
+      }
+
+      &:hover &__side--back {
+        transform: rotateY(0);
+      }
+
+      &:hover &__side--front {
+        transform: rotateY(-180deg);
+      }
+
+      // Front side of the card
+      &__theme {
+        @include absCenter;
+        top: 54%;
+        width: 90%;
+        text-align: center;
       }
 
       &__theme-box {
-        margin-bottom: 1.5rem;
+        color: $color-white;
+        margin-bottom: 8rem;
+      }
+
+      &__subject {
+        font-family: "Inconsolata", monospace;
+        letter-spacing: 0.8rem;
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
       }
 
       &__title {
-        font-size: 4rem;
+        font-family: "VT323", monospace;
+        text-transform: uppercase;
+        font-size: 6rem;
+        font-weight: 100;
       }
-    }
-  }
 
+      // Back side of the card
+      &__cover {
+        position: relative;
+        background-size: cover;
+        height: 14rem;
+        // background-blend-mode: screen;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        background-image: linear-gradient(to top right,
+            rgba($color-primary-dark, 0.65),
+            rgba($color-primary-light, 0.65)),
+          url(https://cdn.spacetelescope.org/archives/images/screen/heic0406a.jpg);
+      }
 
-  .card-image {
-    max-width: 100%;
-    width: 250px;
-    height: 300px;
-    object-fit: cover;
-  }
+      &__heading {
+        text-align: center;
+        color: $color-white;
+        @include absCenter;
+        width: 75%;
+      }
 
+      &__heading-span {
+        text-align: center;
+        font-family: "VT323", monospace;
+        font-size: 3.2rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        padding: 1rem 1.5rem;
+        color: $color-white;
+      }
 
+      &__details {
+        font-family: "Inconsolata", monospace;
+        padding: 4rem 2rem;
 
+        ul {
+          list-style: none;
+          width: 80%;
+          margin: 0 auto;
 
+          li {
+            text-align: center;
+            font-size: 1.8rem;
+            padding: 0.2rem;
+            object-fit: contain;
 
+            &:not(:last-child) {
+              border-bottom: 1px solid $color-gray-light;
+            }
+          }
+        }
+      }
 
-  body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-      sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
+      // Responsivity
+      @media only screen and (max-width: 37.5em),
+      only screen and (hover: none) {
+        height: auto;
+        border-radius: 3px;
+        background-color: $color-white;
+        box-shadow: 0 2rem 6rem rgba($color-black, 0.15);
+
+        &__side {
+          height: auto;
+          position: relative;
+          box-shadow: none;
+
+          &--front {
+            clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+          }
+
+          &--back {
+            transform: rotateY(0);
+          }
+        }
+
+        &:hover &__side--front {
+          transform: rotateY(0);
+        }
 
   code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -557,3 +514,4 @@ url(https://cdn.spacetelescope.org/archives/images/screen/heic0406a.jpg);
 .center .inputbox:hover [type="button"] {
   background: linear-gradient(45deg, greenyellow, dodgerblue);
 }
+
