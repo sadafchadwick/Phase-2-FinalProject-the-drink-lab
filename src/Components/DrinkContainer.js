@@ -8,7 +8,6 @@ function DrinkContainer({drinks}) {
             <DrinkCards 
                 key={drink.id}
                 name={drink.name}
-                key={drink.id}
                 image ={drink.image}
                 cocktail={drink.cocktail}
                 alcoholType={drink.alcoholType}
