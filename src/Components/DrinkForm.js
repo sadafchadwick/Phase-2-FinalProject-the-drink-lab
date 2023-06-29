@@ -177,7 +177,40 @@ function DrinkForm({ addNewDrink }) {
             {/* <div id="drink-collection">
                 showNewDrink(newDrink)
             </div> */}
+        <div className="exampleCard">
+            <div className="card" key={cocktail.id}>
+            
+                <div className="card__side card__side--back">
+                    <div className="card__cover">
+                        <h4 className="card__heading">
+                            <span className="card__heading-span">{name}</span>
+                        </h4>
+                        </div>
+                        <div className="card__details">
+                            <ul>
+                                <li>{alcoholType}</li>
+                                <li>{ingredientOne}</li>
+                                <li>{ingredientTwo}</li>
+                                <li>{ingredientThree}</li>
+                            </ul>
+                    </div>
+                        </div>
+                        <div className="card__side card__side--front">
+                        <span className="card__heading-span">{name}</span>
+                        <img className="card-image"
+                            src={image}
+        
+                        />
+                            <div className="card__theme">
+                        
+                                <div className="card__theme-box">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
         </div>
+        
     )
 }
 
