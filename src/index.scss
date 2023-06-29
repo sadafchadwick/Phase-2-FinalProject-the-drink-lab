@@ -86,6 +86,7 @@ body {
   background-color: $background-color;
 }
 .App3{
+
   display: box;
   width: 80%;
 } 
@@ -103,18 +104,20 @@ html, body {
 #root {
   display: flex;
   flex-direction: column;
-  height: 100%;
-  width: 100%;
+  justify-content: center; /* Align vertically */
+  align-items: center; /* Align horizontally */
 }
 
 
 #drink-collection {
+  align-items: center;
+  justify-content: center;
 display: flex;
 flex-flow: row;
 flex-wrap: wrap
 }
   .App2 {
-    display: flex; flex-direction: column;
+    display:contents; flex-direction: column;
     @include flexCenter;
     padding: 4rem;
     height: 100%;
@@ -555,6 +558,12 @@ url(https://cdn.spacetelescope.org/archives/images/screen/heic0406a.jpg);
   color: #fff;
   border: #fff;
 }
-.center .inputbox:hover [type="button"] {
+.center .inputbox:hover [type="submit"] {
   background: linear-gradient(45deg, greenyellow, dodgerblue);
+}
+.exampleCard {
+  position: absolute;
+  display: box;
+  top: 1;
+  left: 800px;
 }

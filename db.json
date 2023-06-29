@@ -201,14 +201,15 @@
       "likes": 0
     },
     {
-      "name": "sadaf",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLxE5fnaduQ7C0JvG2EyxRL0ubWKEpaiG8_A&usqp=CAU",
-      "alcoholType": "sefeat",
-      "cocktail": true,
+
+      "name": "Paul",
+      "image": "https://patch.com/img/cdn/users/25789/2011/03/raw/eda209edfc07a2e6344eafb53ce09842.jpg",
+      "alcoholType": "Yes",
+      "cocktail": false,
       "ingredients": [
-        "asdf",
-        "",
-        "",
+        "Sugar",
+        "Spice",
+        "Methanphetamine",
         ""
       ],
       "likes": 0,

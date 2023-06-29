@@ -2,10 +2,10 @@ import { useState } from "react"
 // import DrinkCards from "./DrinkCards"
 
 function DrinkForm({ addNewDrink }) {
+
     const [name, setName] = useState("")
     const [image, setImage] = useState("")
     const [cocktail, setCocktail] = useState("null")
-
     const [alcoholType, setAlcoholType] = useState("")
     const [ingredientOne, setIngredientOne] = useState("")
     const [ingredientTwo, setIngredientTwo] = useState("")
@@ -21,7 +21,7 @@ function DrinkForm({ addNewDrink }) {
     }
 
     function handleSelect(e) {
-        setCocktail(e.target.value==="true")
+        setCocktail(e.target.value === "true");
     }
 
     function handleAlcoholType(e) {
@@ -46,43 +46,31 @@ function DrinkForm({ addNewDrink }) {
 
     function handleSubmit(e) {
         e.preventDefault();
+        const newDrinkObj = {
+            name, 
+            image, 
+            alcoholType, 
+            cocktail: (cocktail ? true : false), 
+            ingredients: [ingredientOne, ingredientTwo, ingredientThree, ingredientFour],
+            likes: 0
+        }
         fetch("http://localhost:3000/cocktailsMocktails", {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({
-                name, image, alcoholType, cocktail: (cocktail ? true : false), ingredients:
-                    [ingredientOne, ingredientTwo, ingredientThree, ingredientFour],
-                likes: 0
-            })
+            body: JSON.stringify({newDrinkObj})
         })
             .then(r => r.json())
+
             .then(newDrink => addNewDrink(newDrink))
         e.target.reset()
-
-        // function showNewDrink(newDrink) {
-        //     return (
-        //         <DrinkCards
-        //             key={e.target.id}
-        //             name={e.target.name}
-        //             image={e.target.image}
-        //             cocktail={e.target.cocktail}
-        //             alcoholType={e.target.alcoholType}
-        //             ingredients={e.target.ingredients}
-        //             likes={e.target.likes} />)
-        // }
-
-
-
-
     }
     return (
         <div className="center">
             <form onSubmit={handleSubmit}>
 
-                <h1
-                >
+                <h1>
                     Add Your Drink!
                 </h1>
                 <div className="inputbox" >
@@ -109,15 +97,9 @@ function DrinkForm({ addNewDrink }) {
                         value={cocktail.toString()}
                         onChange={handleSelect}
                     >
-                        <option value="">
-                            Is this a cocktail?
-                        </option>
-                        <option value="true">
-                            True
-                        </option>
-                        <option value="false">
-                            False
-                        </option>
+                        <option value="">Is this a cocktail?</option>
+                        <option value="true">True</option>
+                        <option value="false">False</option>
                     </select>
                 </div>
                 <br />
@@ -180,10 +162,40 @@ function DrinkForm({ addNewDrink }) {
                     />
                 </div>
             </form>
-            {/* <div id="drink-collection">
-                showNewDrink(newDrink)
-            </div> */}
+        <div className="exampleCard">
+            <div className="card" key={cocktail.id}>
+            
+                <div className="card__side card__side--back">
+                    <div className="card__cover">
+                        <h4 className="card__heading">
+                            <span className="card__heading-span">{name}</span>
+                        </h4>
+                        </div>
+                        <div className="card__details">
+                            <ul>
+                                <li>{alcoholType}</li>
+                                <li>{ingredientOne}</li>
+                                <li>{ingredientTwo}</li>
+                                <li>{ingredientThree}</li>
+                            </ul>
+                    </div>
+                        </div>
+                        <div className="card__side card__side--front">
+                        <span className="card__heading-span">{name}</span>
+                        <img className="card-image"
+                            src={image}
+        
+                        />
+                            <div className="card__theme">
+                        
+                                <div className="card__theme-box">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
         </div>
+        
     )
 }
 
