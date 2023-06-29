@@ -23,29 +23,13 @@ function App() {
     fillDrinks([...drinks, newDrink])
   }
 
-  const [cocktail, setCocktail] = useState(true)
-
-  function byCocktail(drinks) {
-    if (drinks.cocktail === true) {
-      return true
-    } else {
-      return false
-    }
-  }
-  const filteredDrinks = (cocktail ? drinks.filter(byCocktail) : drinks)
-
-
-  function handleClick(value) {
-    setCocktail(value)
-  }
-
   return (
     <>
       <div className="App">
         <Header />
         <NavBar />
       </div>
-      <div className="drink-collection">
+      <div className="App2">
         <Switch>
           <Route exact path="/">
             <Carousel />
@@ -54,9 +38,12 @@ function App() {
           <Route path="/aboutus">
             <AboutUs />
           </Route>
-          <Route path="/drinks">
-            <DrinkContainer drinks={filteredDrinks} onClick={() => handleClick(true)} id="drink-collection" />
-          </Route>
+      <Route path="/cocktails" >
+        <DrinkContainer drinks={drinks.filter(drink => drink.cocktail === true)} id="drink-collection"/>
+        </Route>
+        <Route path="/mocktails">
+        <DrinkContainer drinks={drinks.filter(drink => drink.cocktail === false)} id="drink-collection"/>
+        </Route>
           <Route path="/drinkform">
             <DrinkForm addNewDrink={addNewDrink} />
           </Route>

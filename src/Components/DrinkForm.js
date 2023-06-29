@@ -61,27 +61,32 @@ function DrinkForm({ addNewDrink }) {
         e.target.reset()
     }
     return (
-        <div>
+        <div className="center">
             <form onSubmit={handleSubmit}>
-                <h3 className="add-drink">
+
+                <h1
+                >
                     Add Your Drink!
-                </h3>
+                </h1>
+            <div className="inputbox" >
                 <input
                     type="text"
                     name="name"
                     placeholder="Drink name here"
-                    className="input-text"
                     onChange={handleNameChange}
                 />
+                </div>
                 <br />
-                <input
+                <div className="inputbox" >
+                <input 
                     type="text"
                     name="image"
                     placeholder="Paste image here"
-                    className="input-text"
                     onChange={handleImage}
                 />
+                </div>
                 <br />
+                <div className="inputbox" >
                 <select
                     className="select-text"
                     onChange={handleSelect}
@@ -96,53 +101,66 @@ function DrinkForm({ addNewDrink }) {
                         False
                     </option>
                 </select>
+                </div>
                 <br />
-                <input
+                <div className="inputbox" >
+
+                <input className="inputbox"
                     type="text"
                     name="Alcohol Type"
                     placeholder="Alcohol type here"
-                    className="input-text"
                     onChange={handleAlcoholType}
                 />
+                </div>
                 <br />
-                <input
+                <div className="inputbox" >
+
+                <input className="inputbox"
                     type="text"
                     name="Ingredient One"
                     placeholder="Add first ingredient here"
-                    className="input-text"
                     onChange={handleIngredientOne}
                 />
+                </div>
                 <br />
-                <input
+                <div className="inputbox" >
+
+                <input className="inputbox"
                     type="text"
                     name="Ingredient Two"
                     placeholder="Add second ingredient here"
-                    className="input-text"
                     onChange={handleIngredientTwo}
                 />
+                </div>
                 <br />
-                <input
+            <div className="inputbox">
+                <input className="inputbox"
                     type="text"
                     name="Ingredient Three"
                     placeholder="Add third ingredient here"
-                    className="input-text"
                     onChange={handleIngredientThree}
                 />
+                </div>
                 <br />
-                <input
+                <div className="inputbox" >
+
+                <input className="inputbox"
                     type="text"
                     name="Ingredient Four"
                     placeholder="Add fourth ingredient here"
-                    className="input-text"
                     onChange={handleIngredientFour}
                 />
+                </div>
                 <br />
+                <div className="inputbox" >
+
                 <input
-                    type="submit"
+                    type="button"
                     name="submit"
                     value="Create New Drink"
                     className="submit"
                 />
+                </div>
             </form>
         </div>
     )
