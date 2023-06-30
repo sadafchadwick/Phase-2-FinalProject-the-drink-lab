@@ -529,7 +529,7 @@ url(https://cdn.spacetelescope.org/archives/images/screen/heic0406a.jpg);
   top: 0;
   left: 0;
   width: 100%;
-  border: 2px solid #000;
+  border: 2px solid ;
   outline: none;
   background: none;
   padding: 10px;
@@ -566,4 +566,17 @@ url(https://cdn.spacetelescope.org/archives/images/screen/heic0406a.jpg);
   display: box;
   top: 1;
   left: 800px;
+}
+svg{
+  color: #8A2BE2;
+  position: relative;
+  text-align: center;
+  font-weight:bold;
+  max-width:400px;
+  height:10%;
+  left: 800px;
+  bottom: -150px;
+}
+#wavePath{
+  color: #8A2BE2;
 }
