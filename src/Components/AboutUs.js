@@ -6,7 +6,7 @@ function AboutUs() {
         <div className="App">
             <img src={Frankie} alt="Frankie the mixmaster at work"
                 style={{
-                    height: "550px", width: "35%",
+                    height: "400px", width: "40%",
                     display: "flex",
                     backgroundColor: "orange",
                     color: "white",
