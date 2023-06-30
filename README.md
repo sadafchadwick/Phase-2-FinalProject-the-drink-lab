@@ -1,76 +1,56 @@
-# Getting Started with Create React App
+# The Drink Lab
+
+## Welcome to The Drink Lab!
+
+Here we make fun drinks and generally have a good time! 
+
+## Description
+
+On the home page you see a carosel of some cool drink images.
+
+In the about us, you can learn some about our drink lab process and about our invitation to join in the mixology!
+
+Under cocktails you can see our current list of cocktails. Which is your favorite, a classic gin and tonic or a fun Malibu Bay Breeze?
+
+The mockatils page shows our complete list of mocktails. Would you prefer a unique spitzer or a classic Shirley Temple?
+
+Finally, head over to the add a drink page to become part of the mixology experience! Will you add a mocktail or cocktail? Something we've heard of before or something brand new?
+
+## Getting Started
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### Dependencies
 
-In the project directory, you can run:
+- A modern web browser
 
-### `npm start`
+### Installing 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+To get started, run the below in the project directory:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Run npm install
+- Run json-server --watch db.json
+- Run npm start
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
+### Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+## Authors
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Paul Macellaro
+- Sadaf Chadwick
+- Amelia Freeman
 
-### Analyzing the Bundle Size
+## Version History
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- 0.1 Initial Project
 
 ## Acknowledgements
 
-- Sources:
-    - Cocktail Lab Image:
-        - Photo by M.S. Meeuwesen on Unsplash
+- Adam and Emiley!
+
+
+
